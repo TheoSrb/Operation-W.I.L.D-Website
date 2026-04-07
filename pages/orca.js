@@ -4,7 +4,7 @@ const ANIMAL_TAMING_EXP = 270.0;
 const MAX_HEALTH = 60;
 const DAMAGES = 14;
 const KNOCKBACK_RESISTANCE = 0.8;
-const SPEED = 7.2;
+const SPEED = 7.3;
 
 const ARCHETYPE = "ASSASSIN";
 const REGIME = "Carnivore";
