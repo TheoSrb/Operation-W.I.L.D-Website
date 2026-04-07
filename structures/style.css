@@ -1,0 +1,843 @@
+:root {
+    --struct-accent: #5abadc;
+    --struct-savanna: #d4a050;
+    --struct-jungle: #52c45a;
+    --struct-swamp: #5abadc;
+    --struct-desert: #d4c050;
+    --struct-plains: #b47040;
+}
+
+#hero {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.struct-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url(../src/assets/Main-Wallpaper.png);
+    background-size: cover;
+    background-position: center;
+    filter: brightness(.35) saturate(1.1);
+    animation: heroZoom 20s ease-in-out infinite alternate;
+}
+
+.struct-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 60%, rgba(90, 186, 220, .08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.hero-title span {
+    color: var(--struct-accent) !important;
+    text-shadow: 0 0 30px rgba(90, 186, 220, .45) !important;
+}
+
+#struct-filter-bar {
+    padding: 2.5rem 0;
+    background: var(--bg);
+    position: sticky;
+    top: 72px;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(20px);
+    background: rgba(32, 36, 32, .92);
+}
+
+.struct-filter-inner {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.struct-filter-group {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    flex-wrap: wrap;
+}
+
+.struct-filter-label {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text3);
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-right: .25rem;
+    white-space: nowrap;
+}
+
+.struct-filter-btn {
+    padding: .45rem 1rem;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text3);
+    border-radius: 3px;
+    font-size: .82rem;
+    font-family: var(--body);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all .2s;
+    white-space: nowrap;
+}
+
+.struct-filter-btn:hover {
+    border-color: var(--struct-accent);
+    color: var(--struct-accent);
+    background: rgba(90, 186, 220, .06);
+}
+
+.struct-filter-btn.active {
+    border-color: var(--struct-accent);
+    color: var(--struct-accent);
+    background: rgba(90, 186, 220, .12);
+    box-shadow: 0 0 12px rgba(90, 186, 220, .15);
+}
+
+.struct-results-info {
+    margin-left: auto;
+    font-size: .82rem;
+    color: var(--text3);
+}
+
+.struct-results-info strong {
+    color: var(--struct-accent);
+    font-weight: 700;
+}
+
+/* ── STRUCTURES LIST ── */
+#structures-list {
+    padding: 5rem 0 6rem;
+}
+
+#structuresGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* ── STRUCTURE CARD ── */
+.struct-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    transition: border-color .3s, box-shadow .3s;
+}
+
+.struct-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, color-mix(in srgb, var(--struct-card-accent) 5%, transparent), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+    transition: opacity .3s;
+    opacity: 0;
+}
+
+.struct-card:hover::before {
+    opacity: 1;
+}
+
+.struct-card:hover {
+    border-color: color-mix(in srgb, var(--struct-card-accent) 50%, var(--border));
+    box-shadow: 0 8px 48px rgba(0, 0, 0, .35), 0 0 0 1px color-mix(in srgb, var(--struct-card-accent) 20%, transparent);
+}
+
+.struct-card-inner {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    min-height: 500px;
+    position: relative;
+    z-index: 1;
+}
+
+.struct-card-inner.reversed {
+    grid-template-columns: 1.3fr 1fr;
+}
+
+.struct-card-inner.reversed .struct-card-visual {
+    order: 2;
+}
+
+.struct-card-inner.reversed .struct-card-content {
+    order: 1;
+}
+
+/* Visual Panel */
+.struct-card-visual {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--struct-card-bg, #202420), color-mix(in srgb, var(--struct-card-accent, #5abadc) 15%, var(--bg)));
+}
+
+.struct-card-img-wrap {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.struct-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform .6s ease, filter .4s;
+    filter: brightness(.75) saturate(1.1);
+}
+
+.struct-card:hover .struct-card-img {
+    transform: scale(1.04);
+    filter: brightness(.9) saturate(1.2);
+}
+
+.struct-card-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 50%, var(--bg2) 100%);
+    pointer-events: none;
+}
+
+.struct-card-img-emoji {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    opacity: .25;
+    pointer-events: none;
+    transition: opacity .3s;
+    user-select: none;
+}
+
+.struct-card-img-wrap:has(img[style*="display: none"]) .struct-card-img-emoji {
+    opacity: .55;
+}
+
+.struct-card-visual-footer {
+    padding: 1rem 1.25rem;
+    border-top: 1px solid var(--border);
+    background: rgba(0, 0, 0, .2);
+}
+
+.struct-card-mini-spawns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5rem;
+}
+
+.struct-card-spawn-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .35rem;
+    padding: .3rem .65rem;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    font-size: .75rem;
+    color: var(--text3);
+    background: var(--surface);
+    white-space: nowrap;
+    transition: all .2s;
+}
+
+.struct-card:hover .struct-card-spawn-badge {
+    border-color: color-mix(in srgb, var(--struct-card-accent) 40%, var(--border));
+    color: var(--text2);
+}
+
+/* Content Panel */
+.struct-card-content {
+    padding: 2.5rem 2.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+    border-left: 1px solid var(--border);
+}
+
+.struct-card-inner.reversed .struct-card-content {
+    border-left: none;
+    border-right: 1px solid var(--border);
+}
+
+.struct-card-tags {
+    display: flex;
+    gap: .6rem;
+    flex-wrap: wrap;
+}
+
+.struct-card-tag {
+    padding: .3rem .75rem;
+    border: 1px solid;
+    border-radius: 3px;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .05em;
+}
+
+.struct-card-title {
+    font-size: clamp(1.4rem, 2.5vw, 2rem);
+    font-weight: 900;
+    line-height: 1.2;
+    color: var(--text);
+    letter-spacing: -.01em;
+}
+
+.struct-card-desc {
+    font-size: .97rem;
+    color: var(--text2);
+    line-height: 1.75;
+    font-weight: 300;
+}
+
+.struct-card-features {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.struct-card-feat {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: .85rem;
+    color: var(--text2);
+}
+
+.struct-card-feat-icon {
+    width: 22px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.struct-card-feat strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.struct-card-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.struct-card-section-title {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--struct-card-accent, var(--struct-accent));
+    margin-bottom: .75rem;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.struct-card-loot-list {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.struct-card-loot-item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .8rem;
+    padding: .35rem .6rem;
+    border-radius: 3px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: border-color .2s;
+}
+
+.struct-card:hover .struct-card-loot-item {
+    border-color: color-mix(in srgb, var(--struct-card-accent) 25%, var(--border));
+}
+
+.struct-card-loot-icon {
+    font-size: 1rem;
+    width: 20px;
+    text-align: center;
+}
+
+.struct-card-loot-name {
+    flex: 1;
+    color: var(--text2);
+}
+
+.struct-card-loot-chance {
+    font-size: .73rem;
+    font-weight: 700;
+    color: var(--struct-card-accent, var(--struct-accent));
+}
+
+.struct-card-spawns-list {
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.struct-card-spawn-item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .8rem;
+    padding: .35rem .6rem;
+    border-radius: 3px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text2);
+}
+
+.struct-card-spawn-count {
+    margin-left: auto;
+    font-weight: 700;
+    color: var(--struct-card-accent, var(--struct-accent));
+    font-size: .77rem;
+}
+
+.struct-card-btn {
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: .7rem;
+    padding: .85rem 1.6rem;
+    background: transparent;
+    border: 1.5px solid color-mix(in srgb, var(--struct-card-accent) 50%, var(--border));
+    border-radius: 4px;
+    color: var(--struct-card-accent, var(--struct-accent));
+    font-family: var(--body);
+    font-size: .88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .25s;
+    align-self: flex-start;
+    position: relative;
+    overflow: hidden;
+}
+
+.struct-card-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: color-mix(in srgb, var(--struct-card-accent) 10%, transparent);
+    opacity: 0;
+    transition: opacity .25s;
+}
+
+.struct-card-btn:hover::before {
+    opacity: 1;
+}
+
+.struct-card-btn:hover {
+    border-color: var(--struct-card-accent, var(--struct-accent));
+    box-shadow: 0 0 20px color-mix(in srgb, var(--struct-card-accent) 30%, transparent);
+    transform: translateY(-1px);
+}
+
+.struct-card-btn-arrow {
+    margin-left: auto;
+    transition: transform .25s;
+}
+
+.struct-card-btn:hover .struct-card-btn-arrow {
+    transform: translateX(4px);
+}
+
+/* Empty state */
+.struct-empty {
+    text-align: center;
+    padding: 6rem 2rem;
+    color: var(--text3);
+}
+
+.struct-empty-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* ── CTA SECTION ── */
+#struct-explore-cta {
+    padding: 6rem 0;
+    background: var(--bg2);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+}
+
+.struct-cta-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.struct-cta-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.struct-cta-title {
+    font-family: var(--pixel);
+    font-size: clamp(.9rem, 2vw, 1.4rem);
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    letter-spacing: .06em;
+}
+
+.struct-cta-desc {
+    font-size: 1.05rem;
+    color: var(--text2);
+    line-height: 1.7;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+}
+
+.struct-cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ── MODAL ── */
+#structModalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .75);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+}
+
+#structModalOverlay.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.struct-modal {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: translateY(20px) scale(.97);
+    transition: transform .3s;
+}
+
+#structModalOverlay.open .struct-modal {
+    transform: translateY(0) scale(1);
+}
+
+.struct-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text2);
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s;
+    z-index: 10;
+}
+
+.struct-modal-close:hover {
+    border-color: var(--struct-accent);
+    color: var(--struct-accent);
+}
+
+.struct-modal-hero {
+    padding: 3rem 2.5rem 2rem;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+    overflow: hidden;
+    min-height: 140px;
+}
+
+.struct-modal-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, var(--bg2) 100%);
+    pointer-events: none;
+}
+
+.struct-modal-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.struct-modal-badge-row {
+    display: flex;
+    gap: .6rem;
+    flex-wrap: wrap;
+    margin-bottom: .85rem;
+}
+
+.struct-modal-badge {
+    padding: .3rem .75rem;
+    border: 1px solid;
+    border-radius: 3px;
+    font-size: .75rem;
+    font-weight: 600;
+}
+
+.struct-modal-name {
+    font-size: clamp(1.3rem, 3vw, 1.9rem);
+    font-weight: 900;
+    color: var(--text);
+    letter-spacing: -.01em;
+}
+
+.struct-modal-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0;
+}
+
+.struct-modal-col {
+    padding: 2rem 2.5rem;
+}
+
+.struct-modal-col:first-child {
+    border-right: 1px solid var(--border);
+}
+
+.struct-modal-section-title {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .15em;
+    text-transform: uppercase;
+    color: var(--struct-accent);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.struct-modal-desc {
+    font-size: .9rem;
+    color: var(--text2);
+    line-height: 1.75;
+    font-weight: 300;
+}
+
+.struct-modal-features {
+    display: flex;
+    flex-direction: column;
+    gap: .65rem;
+}
+
+.struct-modal-feat {
+    display: flex;
+    align-items: flex-start;
+    gap: .75rem;
+    padding: .65rem .9rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+.struct-modal-feat-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: .05rem;
+}
+
+.struct-modal-feat-label {
+    font-size: .72rem;
+    color: var(--text3);
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-weight: 600;
+    margin-bottom: .15rem;
+}
+
+.struct-modal-feat-val {
+    font-size: .88rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.struct-modal-loot {
+    display: flex;
+    flex-direction: column;
+    gap: .55rem;
+}
+
+.struct-modal-loot-item {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: .85rem;
+}
+
+.struct-modal-loot-icon {
+    font-size: 1.1rem;
+    width: 24px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.struct-modal-loot-name {
+    flex: 1;
+    color: var(--text2);
+    font-weight: 400;
+}
+
+.struct-modal-loot-bar {
+    width: 70px;
+    height: 5px;
+    background: var(--surface2);
+    border-radius: 3px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.struct-modal-loot-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width .6s ease;
+}
+
+.struct-modal-loot-pct {
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--text3);
+    width: 32px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.struct-modal-spawns {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.struct-modal-spawn {
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+    padding: .6rem .9rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: .87rem;
+}
+
+.struct-modal-spawn-icon {
+    font-size: 1.2rem;
+    width: 28px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.struct-modal-spawn-name {
+    flex: 1;
+    color: var(--text2);
+}
+
+.struct-modal-spawn-count {
+    font-weight: 700;
+    font-size: .82rem;
+}
+
+/* ── REVEAL DELAYS ── */
+.reveal-delay-4 { transition-delay: .4s; }
+.reveal-delay-5 { transition-delay: .5s; }
+
+/* ── RESPONSIVE ── */
+@media(max-width: 1100px) {
+    .struct-card-inner,
+    .struct-card-inner.reversed {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width: 860px) {
+    .struct-card-inner,
+    .struct-card-inner.reversed {
+        grid-template-columns: 1fr;
+    }
+
+    .struct-card-inner .struct-card-visual,
+    .struct-card-inner.reversed .struct-card-visual {
+        order: 1;
+        min-height: 260px;
+    }
+
+    .struct-card-inner .struct-card-content,
+    .struct-card-inner.reversed .struct-card-content {
+        order: 2;
+        border-left: none;
+        border-right: none;
+        border-top: 1px solid var(--border);
+    }
+
+    .struct-card-sections {
+        grid-template-columns: 1fr;
+    }
+
+    .struct-modal-body {
+        grid-template-columns: 1fr;
+    }
+
+    .struct-modal-col:first-child {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .struct-filter-inner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .struct-results-info {
+        margin-left: 0;
+    }
+}
+
+@media(max-width: 600px) {
+    .struct-card-content {
+        padding: 1.5rem 1.25rem;
+    }
+
+    #struct-filter-bar {
+        padding: 1.25rem 0;
+    }
+
+    .struct-modal-hero {
+        padding: 2rem 1.5rem 1.5rem;
+    }
+
+    .struct-modal-col {
+        padding: 1.5rem 1.25rem;
+    }
+
+}

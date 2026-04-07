@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forêt de Séquoias — Operation W.I.L.D. Wiki</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="icon" href="../src/assets/Official-Logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <section id="hero-biome">
+        <div class="hero-biome-bg"></div>
+        <div class="hero-biome-fog"></div>
+
+        <div class="hero-biome-content">
+            <nav class="breadcrumb" aria-label="Fil d'Ariane">
+                <a href="../index.html">Accueil</a>
+                <span class="breadcrumb-sep">›</span>
+                <a href="../index.html#biomes">Biomes</a>
+                <span class="breadcrumb-sep">›</span>
+                <span id="breadcrumb-nom"></span>
+            </nav>
+
+            <div class="hero-biome-meta">
+                <span class="hero-biome-category">🌲 Biome</span>
+                <div id="hero-biome-rarity"></div>
+            </div>
+
+            <h1 class="hero-biome-name" id="hero-biome-nom"></h1>
+            <div class="hero-biome-subtitle" id="hero-biome-subtitle"></div>
+
+            <div class="hero-biome-mc-id" id="hero-biome-mc-id"></div>
+
+            <div class="hero-biome-tags" id="hero-biome-tags"></div>
+        </div>
+    </section>
+
+    <section id="quickinfo-biome">
+        <div class="quickinfo-biome-grid">
+            <div class="quickinfo-biome-item">
+                <span class="quickinfo-biome-icon">🌡️</span>
+                <span class="quickinfo-biome-label">Température</span>
+                <span class="quickinfo-biome-value" id="qi-temperature">—</span>
+            </div>
+            <div class="quickinfo-biome-item">
+                <span class="quickinfo-biome-icon">💧</span>
+                <span class="quickinfo-biome-label">Humidité</span>
+                <span class="quickinfo-biome-value" id="qi-humidity">—</span>
+            </div>
+            <div class="quickinfo-biome-item">
+                <span class="quickinfo-biome-icon">🌧️</span>
+                <span class="quickinfo-biome-label">Précipitations</span>
+                <span class="quickinfo-biome-value" id="qi-precipitation">—</span>
+            </div>
+            <div class="quickinfo-biome-item">
+                <span class="quickinfo-biome-icon">☀️</span>
+                <span class="quickinfo-biome-label">Luminosité</span>
+                <span class="quickinfo-biome-value" id="qi-light">—</span>
+            </div>
+            <div class="quickinfo-biome-item">
+                <span class="quickinfo-biome-icon">⛰️</span>
+                <span class="quickinfo-biome-label">Altitude</span>
+                <span class="quickinfo-biome-value" id="qi-altitude">—</span>
+            </div>
+            <div class="quickinfo-biome-item">
+                <span class="quickinfo-biome-icon">🌲</span>
+                <span class="quickinfo-biome-label">Canopée</span>
+                <span class="quickinfo-biome-value" id="qi-canopy">—</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="main-content-biome">
+        <div class="section-inner">
+            <div class="content-grid-biome">
+
+                <div class="content-left">
+
+                    <div class="info-block reveal" id="section-description">
+                        <h2>🌿 Description</h2>
+                        <div id="description-content"></div>
+                    </div>
+
+                    <div class="info-block reveal" id="section-features">
+                        <h2>✨ Caractéristiques Uniques</h2>
+                        <div class="biome-features-grid" id="biome-features-grid"></div>
+                    </div>
+
+                    <div class="info-block reveal" id="section-structures">
+                        <h2>🏛️ Structures Générées</h2>
+                        <div class="biome-structures-grid" id="biome-structures-grid"></div>
+                    </div>
+
+                    <div class="info-block reveal" id="section-blocks">
+                        <h2>📦 Blocs &amp; Ressources</h2>
+                        <div class="biome-blocks-grid" id="biome-blocks-grid"></div>
+                    </div>
+
+                    <div class="info-block reveal" id="section-fauna">
+                        <h2>🐾 Faune Sauvage</h2>
+                        <div class="biome-fauna-grid" id="biome-fauna-grid"></div>
+                    </div>
+
+                    <div class="info-block reveal" id="section-weather">
+                        <h2>🌦️ Météo &amp; Atmosphère</h2>
+                        <div class="biome-weather-grid" id="biome-weather-grid"></div>
+                    </div>
+
+                    <div class="info-block reveal" id="section-dangers">
+                        <h2>⚠️ Dangers du Biome</h2>
+                        <div class="biome-dangers-list" id="biome-dangers-list"></div>
+                    </div>
+
+                    <div class="info-block reveal" id="section-journal">
+                        <h2>📖 Extrait du Journal</h2>
+                        <div id="journal-content"></div>
+                    </div>
+
+                    <div class="info-block reveal" id="section-gallery">
+                        <h2>🖼️ Galerie</h2>
+                        <div class="biome-gallery-grid" id="biome-gallery-grid"></div>
+                    </div>
+
+                </div>
+                <div class="content-right-biome">
+
+                    <div class="sidebar-biome-card reveal">
+                        <div class="sidebar-biome-head">Informations</div>
+                        <div class="sidebar-biome-body">
+                            <div class="sidebar-info-row">
+                                <span class="sidebar-info-label">Nom</span>
+                                <span class="sidebar-info-value" id="si-nom">—</span>
+                            </div>
+                            <div class="sidebar-info-row">
+                                <span class="sidebar-info-label">ID Minecraft</span>
+                                <span class="sidebar-info-value" id="si-mc-id"
+                                    style="font-size:.7rem;color:var(--text3);">—</span>
+                            </div>
+                            <div class="sidebar-info-row">
+                                <span class="sidebar-info-label">Catégorie</span>
+                                <span class="sidebar-info-value" id="si-category">—</span>
+                            </div>
+                            <div class="sidebar-info-row">
+                                <span class="sidebar-info-label">Région</span>
+                                <span class="sidebar-info-value" id="si-region">—</span>
+                            </div>
+                            <div class="sidebar-info-row">
+                                <span class="sidebar-info-label">Climat</span>
+                                <span class="sidebar-info-value" id="si-climate">—</span>
+                            </div>
+                            <div class="sidebar-info-row">
+                                <span class="sidebar-info-label">Rareté</span>
+                                <span class="sidebar-info-value" id="si-rarity">—</span>
+                            </div>
+                            <div class="sidebar-info-row">
+                                <span class="sidebar-info-label">Température</span>
+                                <span class="sidebar-info-value" id="si-temperature">—</span>
+                            </div>
+                            <div class="sidebar-info-row">
+                                <span class="sidebar-info-label">Humidité</span>
+                                <span class="sidebar-info-value" id="si-humidity">—</span>
+                            </div>
+                            <div class="sidebar-info-row">
+                                <span class="sidebar-info-label">Altitude</span>
+                                <span class="sidebar-info-value" id="si-altitude">—</span>
+                            </div>
+                            <div class="sidebar-info-row">
+                                <span class="sidebar-info-label">Luminosité sol</span>
+                                <span class="sidebar-info-value" id="si-light">—</span>
+                            </div>
+                            <div class="sidebar-info-row">
+                                <span class="sidebar-info-label">Structures</span>
+                                <span class="sidebar-info-value" id="si-structures">—</span>
+                            </div>
+                            <div class="sidebar-info-row">
+                                <span class="sidebar-info-label">Faune</span>
+                                <span class="sidebar-info-value" id="si-fauna-count">—</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-biome-card reveal reveal-delay-1">
+                        <div class="sidebar-biome-head">Animaux Natifs</div>
+                        <div class="sidebar-biome-body">
+                            <div class="related-list" id="native-fauna-list"></div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-biome-card reveal" id="thermometer-card"></div>
+
+                    <div class="sidebar-biome-card reveal reveal-delay-2">
+                        <div class="sidebar-biome-head">Biomes Similaires</div>
+                        <div class="sidebar-biome-body">
+                            <div id="related-biomes-list"></div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-biome-card reveal reveal-delay-2">
+                        <div class="sidebar-biome-head">Crafting &amp; Recettes</div>
+                        <div class="sidebar-biome-body">
+                            <div id="biome-crafting-list"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="biome-lightbox" role="dialog" aria-modal="true" aria-label="Visionneuse d'images">
+        <div class="lb-inner">
+            <button class="lb-close" onclick="closeLightbox()" aria-label="Fermer">✕</button>
+            <button class="lb-nav lb-prev" onclick="lbNav(-1)" aria-label="Image précédente">‹</button>
+            <button class="lb-nav lb-next" onclick="lbNav(1)" aria-label="Image suivante">›</button>
+            <img class="lb-img" src="" alt="" />
+            <div class="lb-caption"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="section-inner">
+            <div class="footer-bottom">
+                <p>©
+                    <script>document.write(new Date().getFullYear())</script>
+                    Operation W.I.L.D. — Non affilié à <a href="#">Mojang/Microsoft</a>.
+                </p>
+                <div class="footer-socials">
+                    <a href="https://discord.gg/KtBpwYdpSB" target="_blank" class="social-btn" aria-label="Discord">
+                        <i class="fa-brands fa-discord"></i>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="GitHub">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/operation-w-i-l-d" target="_blank"
+                        class="social-btn" aria-label="CurseForge">
+                        <i class="fa-solid fa-hammer"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../entities.js"></script>
+    <script src="redwood-forest.js"></script>
+    <script src="wild-biome.js"></script>
+    <script src="../search.js"></script>
+    <script src="../navbar.js"></script>
+
+</body>
+
+</html>

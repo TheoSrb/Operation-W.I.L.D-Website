@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosmétiques & Skins — Operation W.I.L.D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="icon" href="../src/assets/Official-Logo.ico" type="image/x-icon" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
+
+<body>
+
+    <section id="hero">
+        <div class="cosm-hero-bg"></div>
+        <div class="hero-gradient"></div>
+        <div class="cosm-hero-overlay"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+
+        <div class="hero-content">
+            <p class="hero-eyebrow">✦ Apparences &amp; Personnalisation ✦</p>
+            <h1 class="hero-title"
+                style="font-family: var(--pixel);font-weight:900;font-size: clamp(1.2rem, 3.5vw, 2.2rem);letter-spacing: .08em;line-height:1.4;margin-bottom:1rem;">
+                Cosmétiques &amp; <span
+                    style="color:var(--skin-legendary);text-shadow:0 0 30px rgba(245,200,66,.45)">Skins</span>
+            </h1>
+            <p class="hero-desc">
+                Chaque créature apprivoisée peut arborer une apparence unique. Des skins communs aux légendaires, chaque
+                skin raconte une histoire différente.
+            </p>
+            <div class="hero-badges">
+                <span class="badge">
+                    <span class="badge-dot" style="background:var(--skin-common)"></span>Commun
+                </span>
+                <span class="badge">
+                    <span class="badge-dot" style="background:var(--skin-rare)"></span>Rare
+                </span>
+                <span class="badge">
+                    <span class="badge-dot" style="background:var(--skin-epic)"></span>Épique
+                </span>
+                <span class="badge">
+                    <span class="badge-dot" style="background:var(--skin-legendary)"></span>Légendaire
+                </span>
+                <span class="badge">
+                    <span class="badge-dot" style="background:var(--skin-event)"></span>Événement
+                </span>
+            </div>
+            <div class="hero-buttons">
+                <a href="#cosmetics-main" class="btn-primary">
+                    <i class="fa-solid fa-palette"></i>Parcourir les Skins
+                </a>
+                <a href="../index.html#animals" class="btn-secondary">
+                    <i class="fa-solid fa-paw"></i>Retour aux Animaux
+                </a>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <span class="marquee-item"><img src="../src/assets/heads/boa.png" class="marquee-head" alt="Boa"> Boa <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/crocodile.png" class="marquee-head" alt="Crocodile"> Crocodile <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/elephant.png" class="marquee-head" alt="Elephant"> Elephant <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/gorilla.png" class="marquee-head" alt="Gorille"> Gorille <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/hippopotamus.png" class="marquee-head" alt="Hippopotame"> Hippopotame <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/kangaroo.png" class="marquee-head" alt="Kangourou"> Kangourou <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/kodiak.png" class="marquee-head" alt="Kodiak"> Kodiak <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/lion.png" class="marquee-head" alt="Lion"> Lion <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/red_panda.png" class="marquee-head" alt="Panda Roux"> Panda Roux <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/tiger.png" class="marquee-head" alt="Tigre"> Tigre <span class="marquee-sep">◆</span></span>
+
+            <span class="marquee-item"><img src="../src/assets/heads/boa.png" class="marquee-head" alt="Boa"> Boa <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/crocodile.png" class="marquee-head" alt="Crocodile"> Crocodile <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/elephant.png" class="marquee-head" alt="Elephant"> Elephant <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/gorilla.png" class="marquee-head" alt="Gorille"> Gorille <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/hippopotamus.png" class="marquee-head" alt="Hippopotame"> Hippopotame <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/kangaroo.png" class="marquee-head" alt="Kangourou"> Kangourou <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/kodiak.png" class="marquee-head" alt="Kodiak"> Kodiak <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/lion.png" class="marquee-head" alt="Lion"> Lion <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/red_panda.png" class="marquee-head" alt="Panda Roux"> Panda Roux <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/heads/tiger.png" class="marquee-head" alt="Tigre"> Tigre <span class="marquee-sep">◆</span></span>
+        </div>
+    </div>
+
+    <section id="stats">
+        <div class="section-inner">
+            <div class="stats-grid">
+                <div class="stat-item stat-total reveal">
+                    <div class="stat-num" id="st-total">0</div>
+                    <div class="stat-label">Total Skins</div>
+                </div>
+                <div class="stat-item stat-common reveal reveal-delay-1">
+                    <div class="stat-num" id="st-common">0</div>
+                    <div class="stat-label">Communs</div>
+                </div>
+                <div class="stat-item stat-rare reveal reveal-delay-2">
+                    <div class="stat-num" id="st-rare">0</div>
+                    <div class="stat-label">Rares</div>
+                </div>
+                <div class="stat-item stat-epic reveal reveal-delay-3">
+                    <div class="stat-num" id="st-epic">0</div>
+                    <div class="stat-label">Epiques</div>
+                </div>
+                <div class="stat-item stat-legendary reveal reveal-delay-4">
+                    <div class="stat-num" id="st-legend">0</div>
+                    <div class="stat-label">Legendaires</div>
+                </div>
+                <div class="stat-item stat-event reveal reveal-delay-5">
+                    <div class="stat-num" id="st-event">0</div>
+                    <div class="stat-label">Evenements</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="cosm-toolbar">
+        <div class="toolbar-inner">
+
+            <div class="cosm-search-wrap">
+                <span class="cosm-search-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="7" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    </svg>
+                </span>
+                <input type="text" id="cosmSearchInput" class="cosm-search-input" placeholder="Rechercher un skin…"
+                    autocomplete="off" spellcheck="false" />
+                <button class="cosm-search-clear" id="searchClear" title="Effacer">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="tb-divider"></div>
+
+            <span class="tb-label">Rareté</span>
+            <div class="tb-pills" id="rarityPills">
+                <button class="tb-pill active" data-rarity="all">Tous</button>
+                <button class="tb-pill" data-rarity="commun">
+                    <span class="r-dot" style="background:var(--skin-common)"></span>Commun
+                </button>
+                <button class="tb-pill" data-rarity="rare">
+                    <span class="r-dot" style="background:var(--skin-rare)"></span>Rare
+                </button>
+                <button class="tb-pill" data-rarity="epique">
+                    <span class="r-dot" style="background:var(--skin-epic)"></span>Épique
+                </button>
+                <button class="tb-pill" data-rarity="legendaire">
+                    <span class="r-dot" style="background:var(--skin-legendary)"></span>Légendaire
+                </button>
+                <button class="tb-pill" data-rarity="event">
+                    <span class="r-dot" style="background:var(--skin-event)"></span>Événement
+                </button>
+            </div>
+
+            <div class="tb-divider"></div>
+
+            <select class="tb-sort" id="skinSort" title="Trier">
+                <option value="default">Tri par défaut</option>
+                <option value="rarity-asc">Rareté ↑ (Commun → Légendaire)</option>
+                <option value="rarity-desc">Rareté ↓ (Légendaire → Commun)</option>
+                <option value="name-asc">Nom A → Z</option>
+                <option value="name-desc">Nom Z → A</option>
+            </select>
+
+            <span class="tb-results" id="tbResults">
+                <strong id="tbCount">0</strong> skin(s)
+            </span>
+
+            <button class="tb-fav-btn" id="openFavBtn" title="Mes favoris">
+                <i class="fa-solid fa-heart"></i>
+                Favoris
+                <span class="fav-count-badge" id="favCountBadge">0</span>
+            </button>
+
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <section id="cosmetics-main">
+        <div class="cosm-inner">
+
+            <div class="cosm-no-results" id="noResults">
+                <div class="cosm-no-results-icon">🔍</div>
+                <h3>Aucun skin trouvé</h3>
+                <p>Essayez de modifier vos filtres ou votre recherche.</p>
+                <button class="cosm-reset-btn" onclick="resetFilters()">
+                    <i class="fa-solid fa-rotate-left"></i> Réinitialiser
+                </button>
+            </div>
+
+            <div id="sectionsContainer"></div>
+
+        </div>
+    </section>
+
+    <div class="fav-overlay" id="favOverlay">
+        <div class="fav-drawer" id="favDrawer">
+            <div class="fav-drawer-header">
+                <div class="fav-drawer-title">
+                    <i class="fa-solid fa-heart"></i>
+                    Mes Favoris
+                </div>
+                <button class="fav-drawer-close" id="closeFavBtn">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div class="fav-drawer-count" id="favDrawerCount">
+                <strong>0</strong> skin(s) en favoris
+            </div>
+            <div class="fav-drawer-list" id="favDrawerList">
+
+            </div>
+            <div class="fav-drawer-clear">
+                <button class="fav-clear-btn" id="clearFavsBtn">
+                    <i class="fa-solid fa-trash-can"></i> Tout supprimer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="skin-modal-overlay" id="skinModal">
+        <div class="skin-modal" id="modalInner">
+            <button class="modal-close" id="modalClose">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18" />
+                    <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+
+            <div class="modal-header">
+                <div class="modal-model-zone" id="modalModelZone">
+                    <div class="modal-model-zone-bg" id="modalModelBg"></div>
+                    <div id="modalModelViewerWrap" style="width:100%;height:100%;position:absolute;inset:0;">
+                        <canvas id="modalModelViewer" style="width:100%;height:100%;display:none;"></canvas>
+                    </div>
+                    <div id="modalOpacityOverlay"
+                        style="position:absolute;inset:0;z-index:3;pointer-events:none;background:var(--bg);opacity:0;">
+                    </div>
+
+                    <img src="" alt="" id="modalHeadFallback" class="modal-model-head" style="display:none" />
+                </div>
+
+                <div class="modal-meta">
+                    <div class="modal-animal-row" id="modalAnimalRow">
+                        <img src="" alt="" id="modalAnimalHead" />
+                        <span id="modalAnimalName"></span>
+                    </div>
+                    <h2 class="modal-skin-name" id="modalSkinName">—</h2>
+                </div>
+            </div>
+
+            <div class="skin-rarity-badge" id="modalRarityBadge"></div>
+
+            <div class="modal-body">
+                <p class="modal-desc" id="modalDesc">—</p>
+
+                <div class="modal-lore" id="modalLore">
+                    <strong>Lore</strong>
+                    <span id="modalLoreText">—</span>
+                </div>
+
+                <div class="modal-details-grid">
+                    <div class="modal-detail">
+                        <div class="modal-detail-lbl">Rareté</div>
+                        <div class="modal-detail-val" id="mdRarity">—</div>
+                    </div>
+                    <div class="modal-detail">
+                        <div class="modal-detail-lbl">Animal</div>
+                        <div class="modal-detail-val" id="mdAnimal">—</div>
+                    </div>
+                    <div class="modal-detail full unlock-detail">
+                        <div class="modal-detail-lbl"><i class="fa-solid fa-lock"
+                                style="margin-right:4px;opacity:.7"></i>Déverrouillage</div>
+                        <div class="modal-detail-val" id="mdObtention">—</div>
+                        <div class="modal-obtention-text" id="mdObtentionText"></div>
+                    </div>
+                </div>
+
+                <button class="modal-fav-btn" id="modalFavBtn">
+                    <i class="fa-regular fa-heart"></i>
+                    Ajouter aux favoris
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="section-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="../src/assets/Main-Title.png" alt="Operation W.I.L.D." />
+                    <p>Operation W.I.L.D. est un mod Minecraft qui ajoute toute une gamme d'animaux et de créatures que vous pouvez apprivoiser, monter, améliorer et personnaliser.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Structures</h5>
+                    <ul>
+                        <li><a href="#" data-filter-biome="savanna">Savane</a></li>
+                        <li><a href="#" data-filter-biome="jungle">Jungle</a></li>
+                        <li><a href="#" data-filter-biome="swamp">Marécage</a></li>
+                        <li><a href="#" data-filter-biome="desert">Désert</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Wiki</h5>
+                    <ul>
+                        <li><a href="../index.html#animals">Animaux</a></li>
+                        <li><a href="../index.html#biomes">Biomes</a></li>
+                        <li><a href="../cosmetics/cosmetics.html">Cosmétiques</a></li>
+                        <li><a href="../tools/tools.html">Équipements</a></li>
+                        <li><a href="../index.html#roadmap">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Communauté</h5>
+                    <ul>
+                        <li><a href="https://discord.gg/KtBpwYdpSB" target="_blank">Discord</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="https://www.curseforge.com/minecraft/mc-mods/operation-w-i-l-d" target="_blank">CurseForge</a></li>
+                        <li><a href="#">Modrinth</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© <script>document.write(new Date().getFullYear())</script> Operation W.I.L.D. — Tous droits réservés. Non affilié à <a href="#">Mojang/Microsoft</a>.</p>
+                <div class="footer-socials">
+                    <a href="https://discord.gg/KtBpwYdpSB" target="_blank" class="social-btn" title="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/operation-w-i-l-d" target="_blank" class="social-btn" title="CurseForge"><i class="fa-solid fa-hammer"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../entities.js"></script>
+    <script src="script.js"></script>
+    <script src="../navbar.js"></script>
+    <script src="../search.js"></script>
+    <script>
+
+        const st = {
+            rarity: 'all',
+            sort: 'default',
+            search: '',
+            openModalId: null
+        };
+
+        const RARITY_ORDER = ['commun', 'rare', 'epique', 'legendaire', "event"];
+
+        const SR_CLASS = {
+            commun: 'sr-common',
+            rare: 'sr-rare',
+            epique: 'sr-epic',
+            legendaire: 'sr-legendary',
+            event: 'sr-event'
+        };
+
+        const RARITY_LORE_BORDER = {
+            commun: 'var(--skin-common)',
+            rare: 'var(--skin-rare)',
+            epique: 'var(--skin-epic)',
+            legendaire: 'var(--skin-legendary)',
+            event: 'var(--skin-event)'
+        };
+
+        function animalById(id) { return ANIMALS.find(a => a.id === id); }
+        function rarityOf(key) { return RARITY[key] || RARITY.commun; }
+
+        function sortSkins(arr) {
+            switch (st.sort) {
+                case 'rarity-asc': return [...arr].sort((a, b) => RARITY_ORDER.indexOf(a.rarete) - RARITY_ORDER.indexOf(b.rarete));
+                case 'rarity-desc': return [...arr].sort((a, b) => RARITY_ORDER.indexOf(b.rarete) - RARITY_ORDER.indexOf(a.rarete));
+                case 'name-asc': return [...arr].sort((a, b) => a.nom.localeCompare(b.nom, 'fr'));
+                case 'name-desc': return [...arr].sort((a, b) => b.nom.localeCompare(a.nom, 'fr'));
+                default: return [...arr].sort((a, b) => RARITY_ORDER.indexOf(a.rarete) - RARITY_ORDER.indexOf(b.rarete));
+            }
+        }
+
+        function initStats() {
+            const c = countByRarity();
+            const animate = (id, target) => {
+                const el = document.getElementById(id);
+                if (!el) return;
+                let cur = 0;
+                const step = Math.max(1, Math.ceil(target / 45));
+                const t = setInterval(() => {
+                    cur = Math.min(cur + step, target);
+                    el.textContent = cur;
+                    if (cur >= target) clearInterval(t);
+                }, 25);
+            };
+            animate('st-total', c.total);
+            animate('st-common', c.commun);
+            animate('st-rare', c.rare);
+            animate('st-epic', c.epique);
+            animate('st-legend', c.legendaire);
+            animate('st-event', c.event);
+        }
+
+        function skinCardHTML(skin, delay) {
+            const r = rarityOf(skin.rarete);
+            const animal = animalById(skin.animal);
+            const isFav = isFavorite(skin.id);
+
+            return `
+    <div class="skin-card" 
+         data-id="${skin.id}" 
+         data-rarity="${skin.rarete}"
+         data-animal="${skin.animal}"
+         style="transition-delay:${delay}ms"
+         onclick="openModal('${skin.id}')">
+
+        <!-- Bouton favori -->
+        <button class="skin-fav-btn ${isFav ? 'active' : ''}" 
+                data-id="${skin.id}"
+                onclick="handleFavClick(event,'${skin.id}')"
+                title="${isFav ? 'Retirer des favoris' : 'Ajouter aux favoris'}">
+            <i class="${isFav ? 'fa-solid' : 'fa-regular'} fa-heart"></i>
+        </button>
+
+        <!-- Image zone -->
+        <div class="skin-card-img">
+            <div class="skin-card-img-bg"></div>
+
+            <img src="${skin.model}" 
+                 alt="${skin.nom}"
+                 class="skin-model-img"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+
+            <div class="skin-model-placeholder" style="display:none">
+                <img src="${animal ? animal.head : ''}" 
+                     alt="${skin.nom}"
+                     onerror="this.src='../src/assets/Official-Logo.png'" />
+                <span class="ph-label">Modèle à venir</span>
+            </div>
+
+            <span class="skin-rarity-badge ${SR_CLASS[skin.rarete]}">${r.label}</span>
+
+            <div class="skin-swatches">
+                <span class="skin-swatch" style="background:${skin.couleur1}" title="${skin.couleur1}"></span>
+                <span class="skin-swatch" style="background:${skin.couleur2}" title="${skin.couleur2}"></span>
+            </div>
+        </div>
+
+        <!-- Corps -->
+        <div class="skin-card-body">
+            <div class="skin-card-name">${skin.nom}</div>
+            <p class="skin-card-desc">${skin.desc}</p>
+        </div>
+    </div>`;
+        }
+
+        function buildRarityMicros(skins) {
+            const counts = {};
+            skins.forEach(s => { counts[s.rarete] = (counts[s.rarete] || 0) + 1; });
+            return RARITY_ORDER
+                .filter(k => counts[k])
+                .map(k => {
+                    const cls = { commun: 'sr-common', rare: 'sr-rare', epique: 'sr-epic', legendaire: 'sr-legendary', event: 'sr-event' }[k];
+                    return `<span class="sec-rarity-micro ${cls}">${RARITY[k].label} ×${counts[k]}</span>`;
+                }).join('');
+        }
+
+        function renderSections() {
+            const query = st.search;
+            const matched = searchSkins(query).filter(s => st.rarity === 'all' || s.rarete === st.rarity);
+            const matchIds = new Set(matched.map(s => s.id));
+
+            let totalVisible = 0;
+            const container = document.getElementById('sectionsContainer');
+            const noResults = document.getElementById('noResults');
+
+            container.innerHTML = '';
+
+            ANIMALS.forEach(animal => {
+                let animalSkins = getSkinsByAnimal(animal.id)
+                    .filter(s => matchIds.has(s.id));
+
+                if (animalSkins.length === 0) return;
+                totalVisible += animalSkins.length;
+                animalSkins = sortSkins(animalSkins);
+
+                const allAnimalSkins = getSkinsByAnimal(animal.id);
+
+                const section = document.createElement('div');
+                section.className = 'animal-section reveal-section';
+                section.id = `section-${animal.id}`;
+                section.innerHTML = `
+            <div class="animal-section-header">
+                <div class="animal-sec-avatar">
+                    <img src="${animal.head}" alt="${animal.nom}" onerror="this.src='../src/assets/Official-Logo.png'">
+                </div>
+                <div class="animal-sec-info">
+                    <div class="animal-sec-biome">${animal.biome}</div>
+                    <div class="animal-sec-name">${animal.nom}</div>
+                    <div class="animal-sec-meta">
+                        <span class="animal-sec-count">${animalSkins.length} skin(s) affiché(s)</span>
+                        <div class="animal-sec-rarity-pills">${buildRarityMicros(allAnimalSkins)}</div>
+                    </div>
+                </div>
+                <a href="../pages/${animal.id}.html" class="animal-sec-anchor">
+                    <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.6rem;opacity:.7;margin-right:3px"></i>Voir la page de l'animal
+                </a>
+            </div>
+            <div class="animal-skins-row" id="row-${animal.id}">
+                ${animalSkins.map((s, i) => skinCardHTML(s, i * 50)).join('')}
+            </div>
+        `;
+
+                container.appendChild(section);
+            });
+
+            document.getElementById('tbCount').textContent = totalVisible;
+            noResults.classList.toggle('visible', totalVisible === 0);
+
+            requestAnimationFrame(() => {
+                triggerReveal();
+                document.querySelectorAll('.skin-card:not(.visible)').forEach(card => {
+                    revealObs.observe(card);
+                });
+            });
+        }
+
+        const revealObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    revealObs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.04, rootMargin: '0px 0px -30px 0px' });
+
+        const sectionObs = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    sectionObs.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.05 });
+
+        function triggerReveal() {
+            document.querySelectorAll('.reveal-section:not(.visible)').forEach(el => sectionObs.observe(el));
+            document.querySelectorAll('.reveal:not(.visible)').forEach(el => revealObs.observe(el));
+        }
+
+        (function setupQnScroll() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(e => {
+                    const id = e.target.id.replace('section-', '');
+                    const link = document.querySelector(`.qn-item[data-animal="${id}"]`);
+                    if (link) link.classList.toggle('active-anchor', e.isIntersecting);
+                });
+            }, { rootMargin: '-40% 0px -40% 0px' });
+
+            setTimeout(() => {
+                document.querySelectorAll('.animal-section').forEach(s => observer.observe(s));
+            }, 500);
+        })();
+
+        function setRarity(r) {
+            st.rarity = r;
+            document.querySelectorAll('#rarityPills .tb-pill').forEach(b => {
+                b.classList.toggle('active', b.dataset.rarity === r);
+            });
+            renderSections();
+        }
+
+        function resetFilters() {
+            st.rarity = 'all';
+            st.sort = 'default';
+            st.search = '';
+            document.getElementById('cosmSearchInput').value = '';
+            document.getElementById('searchClear').classList.remove('visible');
+            document.getElementById('skinSort').value = 'default';
+            document.querySelectorAll('#rarityPills .tb-pill').forEach(b => {
+                b.classList.toggle('active', b.dataset.rarity === 'all');
+            });
+            renderSections();
+        }
+
+        document.getElementById('rarityPills').addEventListener('click', e => {
+            const btn = e.target.closest('.tb-pill');
+            if (btn) setRarity(btn.dataset.rarity);
+        });
+
+        const searchInput = document.getElementById('cosmSearchInput');
+        const searchClear = document.getElementById('searchClear');
+
+        searchInput.addEventListener('input', e => {
+            st.search = e.target.value.trim();
+            searchClear.classList.toggle('visible', st.search.length > 0);
+            renderSections();
+        });
+
+        searchClear.addEventListener('click', () => {
+            searchInput.value = '';
+            st.search = '';
+            searchClear.classList.remove('visible');
+            renderSections();
+        });
+
+        document.getElementById('skinSort').addEventListener('change', e => {
+            st.sort = e.target.value;
+            renderSections();
+        });
+
+        function openModal(skinId) {
+            const skin = SKINS.find(s => s.id === skinId);
+            if (!skin) return;
+            const animal = animalById(skin.animal);
+            const r = rarityOf(skin.rarete);
+            st.openModalId = skinId;
+
+            const bg = document.getElementById('modalModelBg');
+            const viewer = document.getElementById('modalModelViewer');
+            const fallback = document.getElementById('modalHeadFallback');
+
+            bg.style.background = `radial-gradient(ellipse at 50% 100%, ${r.color} 0%, transparent 70%)`;
+            bg.style.opacity = '.32';
+
+            if (skin.model3d) {
+                viewer.style.display = '';
+                fallback.style.display = 'none';
+                loadModelInViewer(skin.model3d, skin.textureVariants || []); // ✅
+            } else {
+                stopThreeViewer();
+                viewer.style.display = 'none';
+                fallback.style.display = 'block';
+                fallback.src = animal ? animal.head : '';
+                fallback.onerror = () => { fallback.src = '../src/assets/Official-Logo.png'; };
+            }
+
+            const modal = document.getElementById('modalInner');
+            modal.setAttribute('data-rarity', skin.rarete);
+
+            const badge = document.getElementById('modalRarityBadge');
+            badge.className = `skin-rarity-badge ${SR_CLASS[skin.rarete]}`;
+            badge.innerHTML = `<span class="r-dot" style="background:${r.color};margin-right:4px"></span>${r.label}`;
+
+            document.getElementById('modalSkinName').textContent = skin.nom;
+
+            const ah = document.getElementById('modalAnimalHead');
+            ah.src = animal ? animal.head : '';
+            ah.alt = animal ? animal.nom : '';
+            document.getElementById('modalAnimalName').textContent = animal ? animal.nom : '';
+
+            document.getElementById('modalDesc').textContent = skin.desc;
+            document.getElementById('modalLore').style.borderLeftColor = r.color;
+            document.getElementById('modalLoreText').textContent = skin.lore;
+
+            document.getElementById('mdRarity').textContent = r.label;
+            document.getElementById('mdAnimal').textContent = animal ? animal.nom : '—';
+            document.getElementById('mdObtention').innerHTML = obtentionBadgeHTML(skin.obtention, false);
+            const textEl = document.getElementById('mdObtentionText');
+            if (textEl) textEl.textContent = skin.obtention;
+
+            updateModalFavBtn(skinId);
+
+            document.getElementById('skinModal').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('skinModal').classList.remove('open');
+            document.body.style.overflow = '';
+            st.openModalId = null;
+            stopThreeViewer();
+        }
+
+        document.getElementById('modalClose').addEventListener('click', closeModal);
+        document.getElementById('skinModal').addEventListener('click', e => {
+            if (e.target === document.getElementById('skinModal')) closeModal();
+        });
+
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') { closeModal(); closeFavDrawer(); }
+            if (e.shiftKey && e.key === 'Enter') {
+                e.preventDefault();
+                const navBtn = document.getElementById('navSearchBtn');
+                if (navBtn) navBtn.click();
+            }
+        });
+
+        function updateFavUI() {
+            const favs = getFavorites();
+            const count = favs.length;
+            const badge = document.getElementById('favCountBadge');
+            const btn = document.getElementById('openFavBtn');
+
+            badge.textContent = count;
+            badge.classList.toggle('visible', count > 0);
+            btn.classList.toggle('has-favs', count > 0);
+        }
+
+        function handleFavClick(e, skinId) {
+            e.stopPropagation();
+            const added = toggleFavorite(skinId);
+
+            document.querySelectorAll(`.skin-fav-btn[data-id="${skinId}"]`).forEach(btn => {
+                btn.classList.toggle('active', added);
+                btn.querySelector('i').className = `${added ? 'fa-solid' : 'fa-regular'} fa-heart`;
+                btn.title = added ? 'Retirer des favoris' : 'Ajouter aux favoris';
+            });
+
+            if (st.openModalId === skinId) updateModalFavBtn(skinId);
+
+            updateFavUI();
+            if (document.getElementById('favOverlay').classList.contains('open')) renderFavDrawer();
+        }
+
+        function updateModalFavBtn(skinId) {
+            const fav = isFavorite(skinId);
+            const btn = document.getElementById('modalFavBtn');
+            btn.className = `modal-fav-btn ${fav ? 'active' : ''}`;
+            btn.innerHTML = `<i class="${fav ? 'fa-solid' : 'fa-regular'} fa-heart"></i> ${fav ? 'Retirer des favoris' : 'Ajouter aux favoris'}`;
+        }
+
+        document.getElementById('modalFavBtn').addEventListener('click', () => {
+            if (st.openModalId) handleFavClick({ stopPropagation: () => { } }, st.openModalId);
+        });
+
+        function openFavDrawer() {
+            renderFavDrawer();
+            document.getElementById('favOverlay').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeFavDrawer() {
+            document.getElementById('favOverlay').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        function renderFavDrawer() {
+            const favSkins = getFavoriteSkins();
+            const list = document.getElementById('favDrawerList');
+            const count = document.getElementById('favDrawerCount');
+
+            count.innerHTML = `<strong>${favSkins.length}</strong> skin(s) en favoris`;
+
+            if (favSkins.length === 0) {
+                list.innerHTML = `
+            <div class="fav-empty">
+                <div class="fav-empty-icon">💔</div>
+                <p>Vous n'avez pas encore de skins favoris.<br>Cliquez sur le ♡ d'une carte pour en ajouter.</p>
+            </div>`;
+                return;
+            }
+
+            list.innerHTML = favSkins.map(skin => {
+                const animal = animalById(skin.animal);
+                const r = rarityOf(skin.rarete);
+                return `
+        <div class="fav-drawer-item" 
+             data-rarity="${skin.rarete}"
+             onclick="openModal('${skin.id}')">
+            <div class="fav-item-avatar">
+                <img src="${animal ? animal.head : ''}" alt="${skin.nom}"
+                     onerror="this.src='../src/assets/Official-Logo.png'">
+            </div>
+            <div class="fav-item-info">
+                <div class="fav-item-name">${skin.nom}</div>
+                <div class="fav-item-sub">
+                    <span class="fav-item-rarity-dot" style="background:${r.color}"></span>
+                    ${r.label} · ${animal ? animal.nom : ''}
+                </div>
+            </div>
+            <button class="fav-item-remove" 
+                    onclick="removeFavItem(event,'${skin.id}')"
+                    title="Retirer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>`;
+            }).join('');
+        }
+
+        function removeFavItem(e, skinId) {
+            e.stopPropagation();
+            toggleFavorite(skinId);
+            document.querySelectorAll(`.skin-fav-btn[data-id="${skinId}"]`).forEach(btn => {
+                btn.classList.remove('active');
+                btn.querySelector('i').className = 'fa-regular fa-heart';
+                btn.title = 'Ajouter aux favoris';
+            });
+            updateFavUI();
+            renderFavDrawer();
+        }
+
+        document.getElementById('openFavBtn').addEventListener('click', openFavDrawer);
+        document.getElementById('closeFavBtn').addEventListener('click', closeFavDrawer);
+        document.getElementById('clearFavsBtn').addEventListener('click', () => {
+            setFavorites([]);
+            document.querySelectorAll('.skin-fav-btn.active').forEach(btn => {
+                btn.classList.remove('active');
+                btn.querySelector('i').className = 'fa-regular fa-heart';
+            });
+            updateFavUI();
+            renderFavDrawer();
+        });
+
+        document.getElementById('favOverlay').addEventListener('click', e => {
+            if (e.target === document.getElementById('favOverlay')) closeFavDrawer();
+        });
+
+        function initParticles() {
+            const c = document.getElementById('heroParticles');
+            if (!c) return;
+            const cols = [
+                'var(--skin-event)', 'var(--skin-legendary)', 'var(--skin-epic)',
+                'var(--green2)', 'var(--skin-rare)', 'var(--skin-common)'
+            ];
+            for (let i = 0; i < 24; i++) {
+                const p = document.createElement('div');
+                p.className = 'particle';
+                p.style.cssText = `
+                        left:${Math.random() * 100}%;
+                        width:${2 + Math.random() * 3}px;
+                        height:${2 + Math.random() * 3}px;
+                        animation-duration:${8 + Math.random() * 14}s;
+                        animation-delay:${Math.random() * 12}s;
+                        background:${cols[Math.floor(Math.random() * cols.length)]};
+                        border-radius:${Math.random() > .5 ? '50%' : '2px'};
+                    `;
+                c.appendChild(p);
+            }
+        }
+
+
+        function parseObtention(obtention) {
+            const lower = obtention.toLowerCase();
+            if (lower.includes('points de prestige')) {
+                const match = obtention.match(/\d+/);
+                const pts = match ? match[0] : '?';
+                return { type: 'prestige', pts, label: pts + ' points de prestige' };
+            } else if (lower.includes('niveau')) {
+                const match = obtention.match(/niveau\s*(\d+)/i);
+                const lvl = match ? match[1] : '?';
+                return { type: 'level', lvl, label: 'Niveau ' + lvl };
+            } else if (lower.includes('évènement') || lower.includes('evenement') || lower.includes('event')) {
+                return { type: 'event', label: 'Évènement' };
+            }
+            return { type: 'default', label: obtention };
+        }
+
+        const PRESTIGE_IMG = '../src/assets/cosmetics/prestige_points.png';
+
+        function obtentionBadgeHTML(obtention, compact = false) {
+            const o = parseObtention(obtention);
+            if (o.type === 'prestige') {
+                return `<div class="unlock-badge unlock-prestige ${compact ? 'compact' : ''}">
+                    <i class="fa-solid fa-lock unlock-lock"></i>
+                    <img src="${PRESTIGE_IMG}" class="prestige-gem" alt="prestige" />
+                    <span class="unlock-pts">${o.pts}</span>
+                    <span class="unlock-lbl">points de prestige</span>
+                </div>`;
+            } else if (o.type === 'level') {
+                return `<div class="unlock-badge unlock-level ${compact ? 'compact' : ''}">
+                    <i class="fa-solid fa-lock unlock-lock"></i>
+                    <i class="fa-solid fa-star unlock-icon"></i>
+                    <span class="unlock-pts">Niv.${o.lvl}</span>
+                    <span class="unlock-lbl">requis</span>
+                </div>`;
+            } else if (o.type === 'event') {
+                return `<div class="unlock-badge unlock-event ${compact ? 'compact' : ''}">
+                    <i class="fa-solid fa-lock unlock-lock"></i>
+                    <i class="fa-solid fa-calendar-star unlock-icon"></i>
+                    <span class="unlock-lbl">Évènement exclusif</span>
+                </div>`;
+            }
+            return `<div class="unlock-badge unlock-default ${compact ? 'compact' : ''}">
+                <i class="fa-solid fa-lock unlock-lock"></i>
+                <span class="unlock-lbl">${obtention}</span>
+            </div>`;
+        }
+
+        (function boot() {
+            initParticles();
+            renderSections();
+            updateFavUI();
+            setTimeout(initStats, 400);
+            setTimeout(triggerReveal, 120);
+        })();
+    </script>
+
+</body>
+
+</html>

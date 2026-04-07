@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Structures — Operation W.I.L.D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="icon" href="../src/assets/Official-Logo.ico" type="image/x-icon" />
+</head>
+
+<body>
+
+    <section id="hero">
+        <div class="struct-hero-bg"></div>
+        <div class="hero-gradient"></div>
+        <div class="struct-hero-overlay"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+
+        <div class="hero-content">
+            <p class="hero-eyebrow">✦ Exploration &amp; Découverte ✦</p>
+            <h1 class="hero-title" style="font-family:var(--pixel);font-size:clamp(1.1rem,3vw,2rem);letter-spacing:.08em;line-height:1.4;margin-bottom:1rem;">
+                Structures &amp; <span
+                    style="color:var(--skin-legendary);text-shadow:0 0 30px rgba(245,200,66,.45)">Donjons</span></span>
+            </h1>
+            <p class="hero-desc">
+                Partez à l'aventure dans des environnements générés procéduralement. Chaque structure abrite des trésors rares, des créatures uniques et les secrets d'Operation W.I.L.D.
+            </p>
+            <div class="hero-badges">
+                <span class="badge"><span class="badge-dot" style="background:var(--struct-savanna)"></span>Savane</span>
+                <span class="badge"><span class="badge-dot" style="background:var(--struct-jungle)"></span>Jungle</span>
+                <span class="badge"><span class="badge-dot" style="background:var(--struct-swamp)"></span>Marécage</span>
+                <span class="badge"><span class="badge-dot" style="background:var(--struct-desert)"></span>Désert</span>
+                <span class="badge"><span class="badge-dot" style="background:var(--struct-plains)"></span>Plaines</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="#structures-list" class="btn-primary"><i class="fa-solid fa-map-location-dot"></i>Explorer les Structures</a>
+                <a href="../index.html#biomes" class="btn-secondary"><i class="fa-solid fa-mountain-sun"></i>Voir les Biomes</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats">
+        <div class="section-inner">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-num" id="ss-total">0</div>
+                    <div class="stat-label">Structures</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-1">
+                    <div class="stat-num" id="ss-biomes">0</div>
+                    <div class="stat-label">Biomes</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-2">
+                    <div class="stat-num" id="ss-loots">0</div>
+                    <div class="stat-label">Objets de Loot</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-3">
+                    <div class="stat-num" id="ss-spawns">0</div>
+                    <div class="stat-label">Spawns Uniques</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <span class="marquee-item">🏕️ Camp Safari <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🐊 Repaire du Crocodile <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🌿 Terrier du Boa <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🏺 Temple de la Jungle <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">💧 Oasis Sauvage <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🦁 Antre du Lion <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🌴 Village Indigène <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🦏 Sanctuaire du Rhinocéros <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🏕️ Camp Safari <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🐊 Repaire du Crocodile <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🌿 Terrier du Boa <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🏺 Temple de la Jungle <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">💧 Oasis Sauvage <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🦁 Antre du Lion <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🌴 Village Indigène <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🦏 Sanctuaire du Rhinocéros <span class="marquee-sep">◆</span></span>
+        </div>
+    </div>
+
+    <section id="structures-list">
+        <div class="section-inner">
+            <div id="structuresGrid"></div>
+        </div>
+    </section>
+
+    <div id="structModalOverlay">
+        <div class="struct-modal">
+            <button class="struct-modal-close" id="structModalClose" aria-label="Fermer">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+            </button>
+            <div class="struct-modal-hero" id="structModalHero">
+                <div class="struct-modal-hero-overlay"></div>
+                <div class="struct-modal-hero-content">
+                    <div class="struct-modal-badge-row" id="structModalBadges"></div>
+                    <h2 class="struct-modal-name" id="structModalName"></h2>
+                </div>
+            </div>
+            <div class="struct-modal-body">
+                <div class="struct-modal-col">
+                    <div class="struct-modal-section-title">Description</div>
+                    <p id="structModalDesc" class="struct-modal-desc"></p>
+                    <div class="struct-modal-section-title" style="margin-top:1.5rem;">Caractéristiques</div>
+                    <div id="structModalFeatures" class="struct-modal-features"></div>
+                </div>
+                <div class="struct-modal-col">
+                    <div class="struct-modal-section-title">Contenu &amp; Loot</div>
+                    <div id="structModalLoot" class="struct-modal-loot"></div>
+                    <div class="struct-modal-section-title" style="margin-top:1.5rem;">Spawns</div>
+                    <div id="structModalSpawns" class="struct-modal-spawns"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="section-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="../src/assets/Main-Title.png" alt="Operation W.I.L.D." />
+                    <p>Operation W.I.L.D. est un mod Minecraft qui ajoute toute une gamme d'animaux et de créatures que vous pouvez apprivoiser, monter, améliorer et personnaliser.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Structures</h5>
+                    <ul>
+                        <li><a href="#" data-filter-biome="savanna">Savane</a></li>
+                        <li><a href="#" data-filter-biome="jungle">Jungle</a></li>
+                        <li><a href="#" data-filter-biome="swamp">Marécage</a></li>
+                        <li><a href="#" data-filter-biome="desert">Désert</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Wiki</h5>
+                    <ul>
+                        <li><a href="../index.html#animals">Animaux</a></li>
+                        <li><a href="../index.html#biomes">Biomes</a></li>
+                        <li><a href="../cosmetics/cosmetics.html">Cosmétiques</a></li>
+                        <li><a href="../tools/tools.html">Équipements</a></li>
+                        <li><a href="../index.html#roadmap">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Communauté</h5>
+                    <ul>
+                        <li><a href="https://discord.gg/KtBpwYdpSB" target="_blank">Discord</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="https://www.curseforge.com/minecraft/mc-mods/operation-w-i-l-d" target="_blank">CurseForge</a></li>
+                        <li><a href="#">Modrinth</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© <script>document.write(new Date().getFullYear())</script> Operation W.I.L.D. — Tous droits réservés. Non affilié à <a href="#">Mojang/Microsoft</a>.</p>
+                <div class="footer-socials">
+                    <a href="https://discord.gg/KtBpwYdpSB" target="_blank" class="social-btn" title="Discord"><i class="fa-brands fa-discord"></i></a>
+                    <a href="#" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/operation-w-i-l-d" target="_blank" class="social-btn" title="CurseForge"><i class="fa-solid fa-hammer"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../entities.js"></script>
+    <script src="script.js"></script>
+    <script src="../search.js"></script>
+    <script src="../navbar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operation W.I.L.D - Wiki Officiel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <link rel="icon" href="src/assets/Official-Logo.ico" type="image/x-icon">
+
+</head>
+
+<body>
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-gradient"></div>
+        <div class="hero-particles" id="particles"></div>
+
+        <div class="hero-content">
+            <p class="hero-eyebrow">✦ Mod Minecraft Officiel ✦</p>
+            <div class="hero-title">
+                <img src="src/assets/Main-Title.png" alt="Operation W.I.L.D." />
+            </div>
+            <p class="hero-desc">
+                Un mod qui ajoute toute une gamme d'animaux et de créatures que vous pouvez apprivoiser, monter,
+                améliorer et personnaliser. Ils vous aideront dans vos explorations, vos
+                activités de farming et vos combats, avec de nouveaux biomes, des boss redoutables et bien d'autres
+                surprises.
+            </p>
+            <div class="hero-badges">
+                <span class="badge"><span class="badge-dot" style="background:var(--green2)"></span>Minecraft
+                    1.21</span>
+                <span class="badge"><span class="badge-dot" style="background:var(--orange2)"></span>NeoForge</span>
+                <span class="badge"><span class="badge-dot" style="background:var(--blue2)"></span><span
+                        class="animals-count"></span> Animaux</span>
+                <span class="badge"><span class="badge-dot" style="background:var(--brown2)"></span>Open Source</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="#download" class="btn-primary"><i class="fa-solid fa-download"></i>Télécharger Gratuitement</a>
+                <a href="#animals" class="btn-secondary"><i class="fa-solid fa-magnifying-glass"></i>Explorer le
+                    Wiki</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <span class="marquee-item">🐍 Boa <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🐊 Crocodile <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🐘 Elephant <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🦍 Gorille <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🦛 Hippopotame <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🦘 Kangourou <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🐻 Kodiak <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🦁 Lion <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🐼 Panda Roux <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🐅 Tigre <span class="marquee-sep">◆</span></span>
+
+            <span class="marquee-item">🐍 Boa <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🐊 Crocodile <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🐘 Elephant <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🦍 Gorille <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🦛 Hippopotame <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🦘 Kangourou <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🐻 Kodiak <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🦁 Lion <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🐼 Panda Roux <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item">🐅 Tigre <span class="marquee-sep">◆</span></span>
+        </div>
+    </div>
+
+    <section id="stats">
+        <div class="section-inner">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-num"><span class="animals-count"></span></div>
+                    <div class="stat-label">Espèces Animales</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-1">
+                    <div class="stat-num"><span class="biomes-count"></span></div>
+                    <div class="stat-label">Biomes Supportés</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-2">
+                    <div class="stat-num">
+                        <div class="stat-num"><span id="cf-downloads"></span></div>
+                    </div>
+                    <div class="stat-label">Téléchargements</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-3">
+                    <div class="stat-num"><span class="mod-version"></span></div>
+                    <div class="stat-label">Version Actuelle</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="section-inner">
+            <div class="about-grid">
+                <div class="about-visual reveal">
+                    <div class="about-img-wrap">
+                        <img src="src/assets/Main-Wallpaper.png" alt="Operation W.I.L.D. Wallpaper" />
+                        <div class="about-img-overlay"></div>
+                    </div>
+                    <div class="about-badge">
+                        <span class="about-badge-num"><span class="mod-version"></span></span>
+                        <span class="about-badge-text">Dernière version stable</span>
+                    </div>
+                </div>
+                <div>
+                    <p class="section-label reveal">À Propos du Mod</p>
+                    <h2 class="section-title reveal">La faune et la flore,<br /><span class="accent-g">réinventée</span>
+                        en blocs.
+                    </h2>
+                    <p class="section-sub reveal">
+                        <span style="color: var(--green); font-weight: bold;">Operation W.I.L.D</span> est un mod
+                        Minecraft actuellement en cours de développement pour NeoForge, axé sur la faune sauvage, les
+                        créatures fantastiques et la biodiversité.
+                        <br>
+                        <br>
+                        Ce mod vous permettra d'apprivoiser une grande variété d'animaux, de les chevaucher, de les
+                        faire évoluer et d'améliorer leurs statistiques pour affronter de puissants
+                        boss et de nombreuses autres menaces.
+                        <br>
+                        <br>
+                        L'exploration sera au cœur de l'expérience, avec de nouveaux biomes et des structures uniques à
+                        découvrir. Vous voyagerez des forêts tropicales
+                        luxuriantes aux abysses les plus sombres, que vous pourrez explorer à l'aide de petits
+                        sous-marins spécialement conçus pour l'aventure.
+                    </p>
+                    <div class="feature-list">
+                        <div class="feature-item reveal">
+                            <div class="feature-icon">🧠</div>
+                            <div class="feature-text">
+                                <h4>IA Comportementale Avancée</h4>
+                                <p>Chaque animal possède plusieurs caractéristiques et comportements propres, rendant
+                                    chaque individu unique.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item reveal reveal-delay-1">
+                            <div class="feature-icon">🎨</div>
+                            <div class="feature-text">
+                                <h4>Diversité Animale</h4>
+                                <p>Chaque animal se décline en plusieurs variantes, offrant une diversité visuelle et
+                                    unique</p>
+                            </div>
+                        </div>
+                        <div class="feature-item reveal reveal-delay-2">
+                            <div class="feature-icon">🌍</div>
+                            <div class="feature-text">
+                                <h4>Apparition Adaptée</h4>
+                                <p>Les espèces apparaissent dans leurs biomes naturels.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="carousel">
+        <div class="section-inner">
+            <div class="carousel-header">
+                <p class="section-label reveal">Galerie</p>
+                <h2 class="section-title reveal">Operation W.I.L.D en <span class="accent-o">images</span></h2>
+            </div>
+
+            <div class="carousel-viewport">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <img class="slide-img" src="src/assets/Main-Wallpaper.png" alt="Illustration Officiel" />
+                        <div class="slide-caption">
+                            <h3>Illustration Officiel</h3>
+                            <p>L'ensemble des créatures du mod réunies en une seule illustration.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img class="slide-img" src="src/assets/animals_wallpapers/Boa-Wallpaper.png" alt="Le Boa" />
+                        <div class="slide-caption">
+                            <h3>Le Boa</h3>
+                            <p>Le plus grand serpent du mod, capable d'étouffer ses proies.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img class="slide-img" src="src/assets/animals_wallpapers/Gorilla-Wallpaper.png"
+                            alt="Le Gorille" />
+                        <div class="slide-caption">
+                            <h3>Le Gorille</h3>
+                            <p>Le plus puissant primate de la planète, capable de briser des os d'une seule main.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img class="slide-img" src="src/assets/animals_wallpapers/Hippopotamus-Wallpaper.png"
+                            alt="L'Hippopotame" />
+                        <div class="slide-caption">
+                            <h3>L'Hippopotame</h3>
+                            <p>Un des plus lourds mammifères terrestres, capable de fendre un bateau en deux d'un coup
+                                de mâchoire.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img class="slide-img" src="src/assets/animals_wallpapers/Orca-Wallpaper.png" alt="L'Orque" />
+                        <div class="slide-caption">
+                            <h3>L'Orque</h3>
+                            <p>Le plus redoutable prédateur des océans froids, capable de traquer sa proie en meute.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img class="slide-img" src="src/assets/animals_wallpapers/Red-Panda-Wallpaper.png"
+                            alt="Le Panda Roux" />
+                        <div class="slide-caption">
+                            <h3>Le Panda Roux</h3>
+                            <p>Le mammifère le plus mignon du mod.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <img class="slide-img" src="src/assets/animals_wallpapers/Tiger-Wallpaper.png" alt="Le Tigre" />
+                        <div class="slide-caption">
+                            <h3>Le Tigre</h3>
+                            <p>Le plus grand félin du monde, capable de bondir sur sa proie sans que cette dernière ne
+                                le voit.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="prevBtn">&#8592;</button>
+                <div class="carousel-dots" id="dots"></div>
+                <button class="carousel-btn" id="nextBtn">&#8594;</button>
+            </div>
+        </div>
+    </section>
+    <section id="animals">
+        <div class="section-inner">
+            <div class="animals-header">
+                <div>
+                    <p class="section-label reveal">Dictionnaire</p>
+                    <h2 class="section-title reveal">Les <span class="accent-g">Créatures</span><br />du Mod</h2>
+                </div>
+                <div class="animals-filter reveal">
+                    <button class="filter-btn active" data-filter="all">Tous</button>
+                    <button class="filter-btn" data-filter="terrestrial">Terrestre</button>
+                    <button class="filter-btn" data-filter="aquatic">Aquatique</button>
+                    <button class="filter-btn" data-filter="aerial">Aérien</button>
+                    <button class="filter-btn" data-filter="tameable">Apprivoisable</button>
+                    <button class="filter-btn" data-filter="rideable">Chevauchable</button>
+                </div>
+            </div>
+
+            <div class="animals-grid" id="animalsGrid"></div>
+
+            <div style="text-align:center;margin-top:3rem;" class="reveal">
+                <a href="#" id="showAllAnimalsBtn" class="btn-secondary" style="display:inline-flex;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="8" x2="12" y2="16" />
+                        <line x1="8" y1="12" x2="16" y2="12" />
+                    </svg>
+                    Voir plus de créatures<span class="animals-count-2"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="biomes">
+        <div class="section-inner">
+            <div class="biomes-header">
+                <div>
+                    <p class="section-label reveal">Exploration</p>
+                    <h2 class="section-title reveal">Les <span class="accent-b">Biomes</span><br />du Mod</h2>
+                </div>
+            </div>
+
+            <div class="biomes-grid" id="biomesGrid">
+                <div class="biome-card reveal" data-type="forest" data-url="biomes/redwood-forest.html">
+                    <div class="biome-thumb">
+                        <div class="biome-img" style="background-image: url('src/assets/biomes/redwood_forest.png');">
+                        </div>
+                    </div>
+                    <div class="biome-info">
+                        <p class="biome-category">🌲 Forêt</p>
+                        <h3 class="biome-name">Forêt de Séquoia</h3>
+                        <p class="biome-temp">Tempéré</p>
+                        <p class="biome-desc">Une forêt d'arbres géants avec un climat tempéré, abritant certains
+                            animaux comme le <a href="pages/kodiak.html" class="biome-inline-link">Kodiak</a>.</p>
+                        <div class="biome-tags"><span class="tag">Exploration</span><span class="tag">Ressources</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align:center;margin-top:3rem;" class="reveal">
+                <a href="#" id="showAllBiomesBtn" class="btn-secondary" style="display:inline-flex;">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10" />
+                        <line x1="12" y1="8" x2="12" y2="16" />
+                        <line x1="8" y1="12" x2="16" y2="12" />
+                    </svg>
+                    Voir plus de biomes <span class="biomes-count-2"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="music">
+        <div class="music-mascot-wrap reveal">
+            <img src="src/assets/red_panda_music.png" alt="" class="music-mascot" />
+        </div>
+        <div class="section-inner">
+            <div class="music-header">
+                <div>
+                    <p class="section-label reveal">Bande Originale</p>
+                    <h2 class="section-title reveal">🎶 Musiques du <span class="accent-g">Mod</span></h2>
+                    <p class="section-sub reveal">Composées spécialement pour Operation W.I.L.D, explorez les pistes qui
+                        accompagnent vos aventures.</p>
+                </div>
+            </div>
+
+            <div class="music-list reveal" id="musicList">
+                <div class="music-track" data-src="src/assets/music/Operation W.I.L.D - Main Theme.mp3"
+                    data-title="Main Theme" data-artist="Operation W.I.L.D. OST">
+                    <div class="music-track-left">
+                        <button class="music-play-btn"><svg width="14" height="14" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <polygon points="5,3 19,12 5,21" />
+                            </svg></button>
+                        <div class="music-track-num">01</div>
+                        <div class="music-track-info">
+                            <span class="music-track-title">Thème Principal</span>
+                            <span class="music-track-sub">Operation W.I.L.D</span>
+                        </div>
+                    </div>
+                    <div class="music-track-right">
+                        <span class="music-track-tag">Thème Principal</span>
+                        <span class="music-track-duration">—:——</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="music-list reveal" id="musicList">
+                <div class="music-track" data-src="src/assets/music/Plant Empress Boss Theme.wav"
+                    data-title="Plant Empress Boss Theme" data-artist="Operation W.I.L.D. OST">
+                    <div class="music-track-left">
+                        <button class="music-play-btn"><svg width="14" height="14" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <polygon points="5,3 19,12 5,21" />
+                            </svg></button>
+                        <div class="music-track-num">02</div>
+                        <div class="music-track-info">
+                            <span class="music-track-title">Impératrice Végétale - Thème de Boss</span>
+                            <span class="music-track-sub">Operation W.I.L.D</span>
+                        </div>
+                    </div>
+                    <div class="music-track-right">
+                        <span class="music-track-tag">Combat de Boss</span>
+                        <span class="music-track-duration">—:——</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="music-player" id="musicPlayer">
+        <div class="mp-left">
+            <div class="mp-cover">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M9 18V5l12-2v13" />
+                    <circle cx="6" cy="18" r="3" />
+                    <circle cx="18" cy="16" r="3" />
+                </svg>
+            </div>
+            <div class="mp-info">
+                <span class="mp-title" id="mpTitle">Aucune piste</span>
+                <span class="mp-artist" id="mpArtist">—</span>
+            </div>
+        </div>
+
+        <div class="mp-center">
+            <div class="mp-controls">
+                <button class="mp-btn" id="mpPrev" title="Précédent">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="19,20 9,12 19,4" />
+                        <line x1="5" y1="4" x2="5" y2="20" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+                <button class="mp-btn mp-btn-main" id="mpPlayPause">
+                    <svg class="icon-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5,3 19,12 5,21" />
+                    </svg>
+                    <svg class="icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"
+                        style="display:none">
+                        <rect x="6" y="4" width="4" height="16" />
+                        <rect x="14" y="4" width="4" height="16" />
+                    </svg>
+                </button>
+                <button class="mp-btn" id="mpNext" title="Suivant">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <polygon points="5,4 15,12 5,20" />
+                        <line x1="19" y1="4" x2="19" y2="20" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mp-progress-wrap">
+                <span class="mp-time" id="mpCurrent">0:00</span>
+                <div class="mp-progress-bar" id="mpProgressBar">
+                    <div class="mp-progress-fill" id="mpProgressFill"></div>
+                    <div class="mp-progress-thumb" id="mpProgressThumb"></div>
+                </div>
+                <span class="mp-time" id="mpDuration">0:00</span>
+            </div>
+        </div>
+
+        <div class="mp-right">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11,5 6,9 2,9 2,15 6,15 11,19" />
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+            </svg>
+            <input type="range" class="mp-volume" id="mpVolume" min="0" max="1" step="0.01" value="0.8" />
+        </div>
+        <button class="mp-close" id="mpClose" title="Fermer le lecteur">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+        </button>
+    </div>
+
+    <section id="tools">
+        <div class="section-inner tools-inner">
+            <div class="tools-image-wrap reveal">
+                <div class="tools-img-glow"></div>
+                <img src="src/assets/Tools.png" alt="Outils Operation W.I.L.D." class="tools-img" />
+            </div>
+            <div class="tools-content">
+                <p class="section-label reveal">Artisanat</p>
+                <h2 class="section-title reveal">Nouveaux <span class="accent-o">Outils</span><br />&amp; Équipements
+                </h2>
+                <p class="section-sub reveal">Forgez des armes et équipements uniques à partir des ressources récoltées
+                    sur les créatures du mod.</p>
+                <div class="tools-chips reveal reveal-delay-1">
+                    <span class="tools-chip">🗡️ Armes</span>
+                    <span class="tools-chip">🛡️ Armures</span>
+                    <span class="tools-chip">🧪 Potions</span>
+                    <span class="tools-chip">⚒️ Artisanat</span>
+                </div>
+                <div class="reveal reveal-delay-2" style="margin-top:2.5rem;">
+                    <a href="tools/tools.html" class="btn-primary" style="display:inline-flex;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg>
+                        Voir les outils
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cosmetics">
+        <div class="section-inner cosmetics-inner">
+            <div class="cosmetics-content">
+                <p class="section-label reveal">Cosmétiques</p>
+                <h2 class="section-title reveal">Skins &amp; <span class="accent-g">Cosmétiques</span><br />pour
+                    Compagnons</h2>
+                <p class="section-sub reveal">Personnalisez l'apparence de vos animaux apprivoisés avec des skins
+                    exclusifs. Chaque compagnon peut arborer une tenue unique déblocables en jeu pour refléter votre
+                    style d'explorateur.</p>
+                <div class="cosmetics-chips reveal reveal-delay-1">
+                    <span class="cosmetics-chip">🎨 Skins</span>
+                    <span class="cosmetics-chip">✨ Effets</span>
+                    <span class="cosmetics-chip">🏆 Récompenses</span>
+                    <span class="cosmetics-chip">🔓 Débloquables</span>
+                </div>
+                <div class="reveal reveal-delay-2" style="margin-top:2.5rem;">
+                    <a href="cosmetics/cosmetics.html" class="btn-secondary" style="display:inline-flex;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 2a10 10 0 0 1 0 20" />
+                            <path d="M2 12h20" />
+                            <path d="M12 2c2.76 3.45 4 7.22 4 10s-1.24 6.55-4 10" />
+                        </svg>
+                        Voir les cosmétiques
+                    </a>
+                </div>
+            </div>
+            <div class="cosmetics-image-wrap reveal">
+                <div class="cosmetics-img-glow"></div>
+                <img src="src/assets/Skins.png" alt="Cosmétiques Operation W.I.L.D." class="cosmetics-img" />
+            </div>
+        </div>
+    </section>
+
+    <section id="structures">
+        <div class="section-inner structures-inner">
+            <div class="structures-image-wrap reveal">
+                <div class="structures-img-glow"></div>
+                <img src="src/assets/Structures.png" alt="Structures Operation W.I.L.D." class="structures-img" />
+            </div>
+            <div class="structures-content">
+                <p class="section-label reveal">Exploration</p>
+                <h2 class="section-title reveal"><span class="accent-b">Structures</span><br />&amp; Donjons</h2>
+                <p class="section-sub reveal">Partez à la découverte de structures uniques générées dans certains
+                    biomes, renfermant trésors et dangers à la fois.</p>
+                <div class="structures-chips reveal reveal-delay-1">
+                    <span class="structures-chip">🏛️ Temples</span>
+                    <span class="structures-chip">🏕️ Campements</span>
+                    <span class="structures-chip">🗺️ Trésors</span>
+                    <span class="structures-chip">☠️ Donjons</span>
+                </div>
+                <div class="reveal reveal-delay-2" style="margin-top:2.5rem;">
+                    <a href="structures/structures.html" class="btn-secondary" style="display:inline-flex;">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
+                        Voir les structures
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download">
+        <div class="section-inner">
+            <div class="download-inner">
+                <div>
+                    <p class="section-label reveal">Téléchargement</p>
+                    <h2 class="section-title reveal">Installez le mod<br /><span class="accent-o">en 2 minutes</span>
+                    </h2>
+                    <p class="section-sub reveal">Compatible avec les principales plateformes. Choisissez votre loader
+                        et la version de Minecraft correspondante.</p>
+                    <div style="margin-top:2rem;" class="reveal reveal-delay-1">
+                        <div class="version-card latest">
+                            <div class="version-header"><span class="version-name"></span><spanclass="version-tag
+                                    tag-latest">LATEST</span></div>
+                            <p class="version-meta"></p>
+                        </div>
+                        <div class="version-card stable">
+                            <div class="version-header"><span class="version-name"></span><spanclass="version-tag
+                                    tag-stable">STABLE</span></div>
+                            <p class="version-meta"></p>
+                        </div>
+                        <div class="version-card experimental">
+                            <div class="version-header"><span class="version-name"></span><spanclass="version-tag
+                                    tag-beta">EXPÉRIMENTAL</span></div>
+                            <p class="version-meta"></p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="section-label reveal">Plateformes</p>
+                    <div class="download-platforms reveal reveal-delay-1">
+                        <a href="https://www.curseforge.com/minecraft/mc-mods/operation-w-i-l-d" target="_blank"
+                            class="platform-btn">
+                            <i class="fa-solid fa-hammer"></i>
+                            <div class="platform-info">
+                                <h4>CurseForge</h4><span>Téléchargement officiel</span>
+                            </div>
+                        </a>
+                        <a href="#" class="platform-btn">
+                            <div class="platform-icon">🌿</div>
+                            <div class="platform-info">
+                                <h4>Modrinth</h4><span>Open Source</span>
+                            </div>
+                        </a>
+                        <a href="#" class="platform-btn">
+                            <i class="devicon-github-original"></i>
+                            <div class="platform-info">
+                                <h4>GitHub</h4><span>Code source</span>
+                            </div>
+                        </a>
+                        <a href="#" class="platform-btn">
+                            <div class="platform-icon">📦</div>
+                            <div class="platform-info">
+                                <h4>Mirror</h4><span>Backup download</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div style="margin-top:2rem;padding:1.5rem;background:var(--surface);border:1px solid var(--border);border-radius:4px;border-left:3px solid var(--blue2);"
+                        class="reveal reveal-delay-2">
+                        <h4 style="margin-bottom:.75rem;display:flex;align-items:center;gap:8px;"><span>📋</span>
+                            Installation rapide</h4>
+                        <ol
+                            style="padding-left:1.25rem;display:flex;flex-direction:column;gap:.5rem;color:var(--text2);font-size:.9rem;line-height:1.6;">
+                            <li>Installez <strong style="color:var(--text)">NeoForge</strong> pour votre version
+                                Minecraft</li>
+                            <li>Téléchargez le fichier <code
+                                    style="background:var(--bg2);padding:2px 6px;border-radius:2px;color:var(--green2)">.jar</code>ci-dessus
+                            </li>
+                            <li>Placez-le dans le dossier <code
+                                    style="background:var(--bg2);padding:2px 6px;border-radius:2px;color:var(--green2)">.minecraft/mods</code>
+                            </li>
+                            <li>Lancez Minecraft avec NeoForge.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="requirements">
+        <div class="section-inner">
+            <div style="text-align:center;">
+                <p class="section-label reveal" style="display:block;">Configuration Requise</p>
+                <h2 class="section-title reveal">Compatibilité &amp; <span class="accent-b">Prérequis</span></h2>
+            </div>
+            <div class="req-grid">
+                <div class="req-card reveal"><span class="req-icon">🎮</span>
+                    <h3 class="req-title">Minecraft</h3>
+                    <p class="req-value">1.21</p>
+                    <p class="req-note">Les versions antérieures à 1.21 ne sont pas maintenues.
+                    </p>
+                </div>
+                <div class="req-card reveal reveal-delay-1"><span class="req-icon">⚙️</span>
+                    <h3 class="req-title">Mod Loader</h3>
+                    <p class="req-value">NeoForge 21.0.167</p>
+                    <p class="req-note">Forge et Fabric ne sont pas supportés.</p>
+                </div>
+                <div class="req-card reveal reveal-delay-2"><span class="req-icon">💾</span>
+                    <h3 class="req-title">RAM Recommandée</h3>
+                    <p class="req-value">4 Go minimum</p>
+                    <p class="req-note">6-8 Go recommandés pour une expérience fluide avec d'autres mods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap">
+        <div class="section-inner">
+            <p class="section-label reveal">Roadmap</p>
+            <h2 class="section-title reveal">Ce qui arrive<br /><span class="accent-o">ensuite</span></h2>
+            <p class="section-sub reveal">Le développement est actif. Voici les prochaines étapes planifiées.</p>
+            <div class="roadmap-timeline">
+
+                <!--<div class="roadmap-item reveal"> -> Future
+                    <div class="roadmap-dot"></div>
+                    <p class="roadmap-meta">v1.5 — ÉTÉ 2025</p>
+                    <h3 class="roadmap-title">Flore &amp; Écosystèmes 🌿</h3>
+                    <p class="roadmap-desc">Ajout de plantes interactives, champignons géants, et d'un système de chaîne alimentaire dynamique.</p>
+                    <div class="roadmap-tags"><span class="tag">Planifié</span></div>
+                </div>-->
+
+                <div class="roadmap-item current reveal">
+                    <div class="roadmap-dot"></div>
+                    <p class="roadmap-meta">[BETA] - V0.1</p>
+                    <h3 class="roadmap-title">Lancement Initial 🎉 <span class="accent-o">(En cours)</span></h3>
+                    <p class="roadmap-desc">Sortie publique.</p>
+                    <div class="roadmap-tags"><span class="tag"
+                            style="border-color:var(--orange);color:var(--orange2)">⚡ En cours</span></div>
+                </div>
+
+                <!--<div class="roadmap-item done reveal"> DONE -> Terminé
+                    <div class="roadmap-dot"></div>
+                    <p class="roadmap-meta">v1.2 — NOVEMBRE 2024</p>
+                    <h3 class="roadmap-title">Mise à Jour Aquatique 🌊</h3>
+                    <p class="roadmap-desc">Ajout du Mosasaure, requin-marteau, raie manta et tortue marine. Nouveau biome : Récif Corallien.</p>
+                    <div class="roadmap-tags"><span class="tag" style="border-color:var(--green);color:var(--green2)">✓ Terminé</span></div>
+                </div>-->
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="section-inner">
+            <div class="contact-grid">
+                <div>
+                    <p class="section-label reveal">Contact</p>
+                    <h2 class="section-title reveal">Rejoignez la<br /><span class="accent-g">communauté</span></h2>
+                    <p class="section-sub reveal">Une question, un bug à signaler, ou envie de contribuer ? La
+                        communauté W.I.L.D. est ouverte à tous.</p>
+                    <div class="contact-links">
+                        <a href="https://discord.gg/KtBpwYdpSB" class="contact-link reveal" target="_blank">
+                            <div class="contact-link-icon" style="background:rgba(88,101,242,.15);"><i
+                                    class="fa-brands fa-discord"></i></div>
+                            <div class="contact-link-text">
+                                <h4>Discord</h4><span>Rejoignez la communauté française de Operation W.I.L.D sur le
+                                    serveur Discord.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form reveal reveal-delay-2">
+                    <form id="contactForm" action="https://formspree.io/f/mjgadqyj" method="POST">
+                        <h3 class="form-title">Envoyer un message</h3>
+                        <p class="form-sub">Pour les rapports de bugs, les suggestions et bien d'autres.</p>
+                        <div class="form-group">
+                            <label>Pseudonyme <span class="red-star">*</span></label>
+                            <input type="text" name="pseudonyme" placeholder="Steve" />
+                        </div>
+                        <div class="form-group">
+                            <label>Email <span class="red-star">*</span></label>
+                            <input type="email" name="email" placeholder="alex@exemple.com" />
+                        </div>
+                        <div class="form-group">
+                            <label>Sujet <span class="red-star">*</span></label>
+                            <select name="sujet">
+                                <option value="">-- Choisir --</option>
+                                <option>Rapport de bug</option>
+                                <option>Suggestion de feature</option>
+                                <option>Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message <span class="red-star">*</span></label>
+                            <textarea name="message" placeholder="Décrivez votre demande..."></textarea>
+                        </div>
+                        <button type="submit" class="form-submit">Envoyer le Message ✦</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="section-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="src/assets/Main-Title.png" alt="Operation W.I.L.D." />
+                    <p>Operation W.I.L.D. est un mod Minecraft qui ajoute toute une gamme d'animaux et de créatures que
+                        vous pouvez apprivoiser, monter, améliorer et personnaliser.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Wiki</h5>
+                    <ul>
+                        <li><a href="#animals">Animaux</a></li>
+                        <li><a href="#">Biomes</a></li>
+                        <li><a href="#">Objets & Drops</a></li>
+                        <li><a href="#">Comportements</a></li>
+                        <li><a href="#">Commandes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Ressources</h5>
+                    <ul>
+                        <li><a href="#download">Installation</a></li>
+                        <li><a href="#download">Configuration</a></li>
+                        <li><a href="#requirements">Compatibilité</a></li>
+                        <li><a href="#">Changelog</a></li>
+                        <li><a href="#">API Modder</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Communauté</h5>
+                    <ul>
+                        <li><a href="https://discord.gg/KtBpwYdpSB" target="_blank">Discord</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="https://www.curseforge.com/minecraft/mc-mods/operation-w-i-l-d"
+                                target="_blank">CurseForge</a></li>
+                        <li><a href="#">Modrinth</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>©
+                    <script>document.write(new Date().getFullYear())</script> Operation W.I.L.D. - Tous droits réservés.
+                    Non affilié à <a href="#">Mojang/Microsoft</a>.
+                </p>
+                <div class="footer-socials">
+                    <a href="https://discord.gg/KtBpwYdpSB" target="_blank" class="social-btn" title="Discord"><i
+                            class="fa-brands fa-discord"></i></a>
+                    <a href="#" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/operation-w-i-l-d" target="_blank"
+                        class="social-btn" title="CurseForge"><i class="fa-solid fa-hammer"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="toast" id="toast">
+        <p class="toast-title"><span>✦</span> Message envoyé !</p>
+        <p class="toast-body">Merci, nous vous répondrons dans les 48h.</p>
+    </div>
+
+    <script src="entities.js"></script>
+    <script src="files.js"></script>
+    <script src="script.js"></script>
+    <script src="search.js"></script>
+    <script src="navbar.js"></script> 
+</body>
+
+</html>

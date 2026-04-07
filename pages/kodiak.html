@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animal - Operation W.I.L.D. Wiki</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@300;400;500;600;700;900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="icon" href="../src/assets/Official-Logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section id="hero-animal">
+    <div class="hero-animal-bg"></div>
+    <div class="hero-animal-gradient"></div>
+    <div class="hero-animal-content">
+      <div class="breadcrumb">
+        <a href="../index.html">Accueil</a>
+        <span class="breadcrumb-sep">›</span>
+        <a href="../index.html#animals">Dictionnaire</a>
+        <span class="breadcrumb-sep">›</span>
+        <span id="breadcrumb-nom"></span>
+      </div>
+      <div class="animal-hero-rarity" id="hero-rarete"></div>
+      <h1 class="animal-hero-name" id="hero-nom"></h1>
+      <br>
+      <p class="animal-hero-latin" id="hero-latin"></p>
+      <div class="animal-hero-tags" id="hero-tags"></div>
+    </div>
+  </section>
+
+  <section id="quickinfo">
+    <div class="section-inner">
+      <div class="quickinfo-grid">
+        <div class="quickinfo-item"><span class="quickinfo-icon">❤️</span><span class="quickinfo-label">Points de
+            vie</span><span class="quickinfo-value" id="qi-pv"></span></div>
+        <div class="quickinfo-item"><span class="quickinfo-icon">⚔️</span><span
+            class="quickinfo-label">Dégâts</span><span class="quickinfo-value" id="qi-degats"></span></div>
+        <div class="quickinfo-item"><span class="quickinfo-icon">🛡️</span><span class="quickinfo-label">Résistance au
+            recul</span><span class="quickinfo-value" id="qi-armure"></span></div>
+        <div class="quickinfo-item"><span class="quickinfo-icon">💨</span><span
+            class="quickinfo-label">Vitesse</span><span class="quickinfo-value" id="qi-vitesse"></span></div>
+        <div class="quickinfo-item"><span class="quickinfo-icon">🌍</span><span
+            class="quickinfo-label">Biome</span><span class="quickinfo-value" id="qi-biome"></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="main-content">
+    <div class="section-inner">
+      <div class="content-grid">
+        <div class="content-left">
+
+          <div class="info-block reveal" id="section-desc">
+            <h2>🐾 Description</h2>
+            <div id="description-content"></div>
+          </div>
+
+          <div class="info-block reveal" id="section-comportement">
+            <h2>🧠 Comportements</h2>
+            <div class="behaviour-grid" id="behaviors-grid"></div>
+          </div>
+
+          <div class="info-block reveal" id="section-stats">
+            <h2>📊 Statistiques</h2>
+            <div class="stats-list" id="stats-list"></div>
+          </div>
+
+          <div class="info-block reveal" id="section-variantes">
+            <h2>🎨 Variantes</h2>
+            <div class="variants-grid" id="variants-grid"></div>
+          </div>
+
+          <div class="info-block reveal" id="section-journal">
+            <h2>📖 Extrait du Journal</h2>
+            <div id="journal-content"></div>
+          </div>
+
+          <div class="info-block reveal" id="section-sounds">
+            <h2>🔊 Bruitages</h2>
+            <div class="sounds-categories" id="sounds-categories"></div>
+            <div class="sounds-list" id="sounds-list"></div>
+          </div>
+
+          <div class="info-block reveal" id="section-animations">
+            <h2>🎬 Animations</h2>
+            <div class="animations-grid" id="animations-grid"></div>
+          </div>
+
+          <div class="info-block reveal" id="section-apprivoisement">
+            <h2>🦴 Apprivoisement</h2>
+            <img id="difficulty-icon" style="width:50px;position:absolute;top:1rem;right:1rem;">
+            <div class="taming-steps" id="taming-steps"></div>
+            <div class="warning-box" id="taming-warning"></div>
+            <div class="tip-box" id="taming-tip"></div>
+          </div>
+
+          <div class="info-block reveal" id="section-selle">
+            <h2>🪄 Fabriquer la Selle</h2>
+            <div class="saddle-inner">
+              <div class="saddle-preview">
+                <img id="saddle-img" src="" alt="Selle" />
+              </div>
+              <div class="saddle-content">
+                <div class="saddle-label">Ingrédients de fabrication</div>
+                <div class="saddle-title" id="saddle-name"></div>
+                <div class="saddle-ingredients" id="saddle-ingredients"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-block reveal" id="section-montee">
+            <h2>🏇 Capacités en tant que Monture</h2>
+            <div class="mount-grid" id="mount-grid"></div>
+          </div>
+
+          <div class="info-block reveal" id="section-drops">
+            <h2>📦 Drops & Butin</h2>
+            <div class="drops-grid" id="drops-grid"></div>
+          </div>
+
+          <div class="info-block locker-block reveal" id="section-cosmetiques">
+
+            <div class="locker-header">
+              <h2>✨ Cosmétiques</h2>
+              <div class="locker-filter-tabs" id="locker-filter-tabs"></div>
+            </div>
+
+            <div class="locker-container">
+
+              <div class="locker-preview" id="locker-preview">
+                <div class="locker-preview-scanlines"></div>
+                <div class="locker-preview-bg" id="locker-preview-bg"></div>
+                <div class="locker-preview-inner">
+                  <div class="locker-preview-glow" id="locker-preview-glow"></div>
+                  <img id="locker-preview-img" class="locker-preview-img" src="" alt="" />
+                </div>
+                <div class="locker-preview-info">
+                  <div class="locker-preview-rarity" id="locker-preview-rarity"></div>
+                  <div class="locker-preview-name" id="locker-preview-name"></div>
+                  <div class="locker-preview-desc" id="locker-preview-desc"></div>
+                </div>
+              </div>
+
+              <div class="locker-right">
+                <div class="locker-grid" id="locker-grid"></div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="info-block reveal" id="section-spawn">
+            <h2>🗺️ Zones d'Apparition</h2>
+            <div class="biome-grid" id="biomes-grid"></div>
+          </div>
+
+        </div>
+
+        <div class="content-right">
+
+          <div class="sidebar-card reveal">
+            <div class="sidebar-card-head"><span>Portrait</span></div>
+            <div class="sidebar-card-body">
+              <div class="animal-portrait"><img id="portrait-img" src="" alt="" /></div>
+              <div class="sidebar-info-row"><span class="sidebar-info-label">Nom commun</span><span
+                  class="sidebar-info-value" id="si-nom"></span></div>
+              <div class="sidebar-info-row"><span class="sidebar-info-label">Exp. d'apprivoisement</span><span
+                  class="sidebar-info-value" id="si-taming"></span></div>
+              <div class="sidebar-info-row"><span class="sidebar-info-label">Nom scientifique</span><span
+                  class="sidebar-info-value" id="si-latin" style="font-style:italic;font-size:.8rem;"></span></div>
+              <div class="sidebar-info-row"><span class="sidebar-info-label">Rareté</span><span
+                  class="sidebar-info-value" id="si-rarete"></span></div>
+              <div class="sidebar-info-row"><span class="sidebar-info-label">Archétype</span><span
+                  class="sidebar-info-value" id="si-archetype"></span></div>
+              <div class="sidebar-info-row"><span class="sidebar-info-label">Catégorie</span><span
+                  class="sidebar-info-value" id="si-categorie"></span></div>
+              <div class="sidebar-info-row"><span class="sidebar-info-label">Tempérament</span><span
+                  class="sidebar-info-value" id="si-temperament"></span></div>
+              <div class="sidebar-info-row"><span class="sidebar-info-label">Régime</span><span
+                  class="sidebar-info-value" id="si-regime"></span></div>
+              <div class="sidebar-info-row"><span class="sidebar-info-label">Apprivoisable</span><span
+                  class="sidebar-info-value" id="si-apprivoisable"></span></div>
+              <div class="sidebar-info-row"><span class="sidebar-info-label">Chevauchable</span><span
+                  class="sidebar-info-value" id="si-chevauchable"></span></div>
+              <div class="sidebar-info-row"><span class="sidebar-info-label">Variantes</span><span
+                  class="sidebar-info-value" id="si-variantes"></span></div>
+            </div>
+          </div>
+
+          <div class="sidebar-card reveal reveal-delay-1">
+            <div class="sidebar-card-head"><span>Animaux Similaires</span></div>
+            <div class="sidebar-card-body">
+              <div class="related-list" id="similar-list"></div>
+            </div>
+          </div>
+
+          <div class="sidebar-card reveal reveal-delay-2">
+            <div class="sidebar-card-head"><span>Crafting & Recettes</span></div>
+            <div class="sidebar-card-body">
+              <div style="display:flex;flex-direction:column;gap:.75rem;" id="crafting-list"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="section-inner">
+      <div class="footer-bottom">
+        <p>©
+          <script>document.write(new Date().getFullYear())</script> Operation W.I.L.D. — Non affilié à <a
+            href="#">Mojang/Microsoft</a>.
+        </p>
+        <div class="footer-socials">
+          <a href="https://discord.gg/KtBpwYdpSB" target="_blank" class="social-btn"><i
+              class="fa-brands fa-discord"></i></a>
+          <a href="#" class="social-btn"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.curseforge.com/minecraft/mc-mods/operation-w-i-l-d" target="_blank" class="social-btn"><i
+              class="fa-solid fa-hammer"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../entities.js"></script>
+  <script src="wild-map.js"></script>
+  <script src="wild-sounds.js"></script>
+  <script src="kodiak.js"></script>
+  <script src="wild-animals.js"></script>
+  <script src="../search.js"></script>
+  <script src="../navbar.js"></script>
+</body>
+
+</html>

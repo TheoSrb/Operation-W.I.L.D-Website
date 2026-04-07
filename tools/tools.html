@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Outils & Équipements — Operation W.I.L.D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@300;400;500;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="icon" href="../src/assets/Official-Logo.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-gradient"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">✦ Artisanat & Équipement ✦</p>
+            <h1 class="hero-title">Outils &amp; <span>Équipements</span></h1>
+            <p class="hero-desc">
+                Forgez des armes redoutables, des armures résistantes et des outils uniques à partir des ressources
+                récoltées sur les créatures d'Operation W.I.L.D.
+            </p>
+            <div class="hero-badges">
+                <span class="badge"><span class="badge-dot" style="background:var(--orange2)"></span>Armes
+                    Animales</span>
+                <span class="badge"><span class="badge-dot" style="background:var(--blue2)"></span>Armures
+                    Naturelles</span>
+                <span class="badge"><span class="badge-dot" style="background:var(--green2)"></span>Outils
+                    Spéciaux</span>
+                <span class="badge"><span class="badge-dot" style="background:var(--purple)"></span>Objets
+                    Légendaires</span>
+            </div>
+            <div class="hero-buttons">
+                <a href="#section-animal" class="btn-primary"><i class="fa-solid fa-hammer"></i>Voir les Outils</a>
+                <a href="#crafting-intro" class="btn-secondary"><i class="fa-solid fa-scroll"></i>Guide de Craft</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <span class="marquee-item"><img src="../src/assets/tools/reptilian_daggers.png" class="marquee-img" /> Dagues Reptiliennes <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/jade_sword.png" class="marquee-img" /> Épée en Jade <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/ruby_sword.png" class="marquee-img" /> Épée en Rubis <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/primitive_spear_2d.png" class="marquee-img" /> Lance Primitive <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/camouflage_helmet.png" class="marquee-img" /> Casque de Camouflage <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/jade_pickaxe.png" class="marquee-img" /> Pioche en Jade <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/ruby_axe.png" class="marquee-img" /> Hache en Rubis <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/camouflage_chestplate.png" class="marquee-img" /> Plastron de Camouflage <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/primitive_slingshot.png" class="marquee-img" /> Lance-Pierre Primitif <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/jade_axe.png" class="marquee-img" /> Hache en Jade <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/maya_blowpipe.png" class="marquee-img" /> Sarbacane Primitive <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/jade_helmet.png" class="marquee-img" /> Casque en Jade <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/ruby_pickaxe.png" class="marquee-img" /> Pioche en Rubis <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/primitive_sickle.png" class="marquee-img" /> Faucille Primitive <span class="marquee-sep">◆</span></span>
+
+            <span class="marquee-item"><img src="../src/assets/tools/reptilian_daggers.png" class="marquee-img" /> Dagues Reptiliennes <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/jade_sword.png" class="marquee-img" /> Épée en Jade <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/ruby_sword.png" class="marquee-img" /> Épée en Rubis <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/primitive_spear_2d.png" class="marquee-img" /> Lance Primitive <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/camouflage_helmet.png" class="marquee-img" /> Casque de Camouflage <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/jade_pickaxe.png" class="marquee-img" /> Pioche en Jade <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/ruby_axe.png" class="marquee-img" /> Hache en Rubis <span class="marquee-sep">◆</span></span>
+            <span class="marquee-item"><img src="../src/assets/tools/maya_blowpipe.png" class="marquee-img" /> Sarbacane Primitive <span class="marquee-sep">◆</span></span>
+        </div>
+    </div>
+
+    <section id="stats">
+        <div class="section-inner">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-num"><span class="stat-tools-total">0</span></div>
+                    <div class="stat-label">Outils & Équipements</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-1">
+                    <div class="stat-num"><span class="stat-weapons">0</span></div>
+                    <div class="stat-label">Armes</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-2">
+                    <div class="stat-num"><span class="stat-armors">0</span></div>
+                    <div class="stat-label">Armures & Boucliers</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-3">
+                    <div class="stat-num"><span class="stat-specials">0</span></div>
+                    <div class="stat-label">Objets Spéciaux</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-3">
+                    <div class="stat-num"><span class="stat-materials">0</span></div>
+                    <div class="stat-label">Matériaux Uniques</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="section-animal" class="tools-section">
+        <div class="animal-bg-img">
+            <img src="../src/assets/tools/animal.png" alt="" aria-hidden="true" />
+        </div>
+        <div class="section-inner">
+            <div class="tools-section-header reveal">
+                <div class="tools-section-badge badge-animal">🐾 Animal</div>
+                <h2 class="section-title">Équipements <span class="accent-g">Organiques</span></h2>
+                <p class="section-sub">Forgés à partir des matériaux récoltés sur les créatures du mod.</p>
+            </div>
+
+            <div class="tools-filter-row reveal reveal-delay-1">
+                <div class="filter-group">
+                    <span class="filter-group-label">Type</span>
+                    <button class="filter-btn active" data-cat-filter-animal="all">Tous</button>
+                    <button class="filter-btn" data-cat-filter-animal="weapon">⚔️ Armes</button>
+                    <button class="filter-btn" data-cat-filter-animal="armor">🛡️ Armures</button>
+                    <button class="filter-btn" data-cat-filter-animal="tool">⛏️ Outils</button>
+                    <button class="filter-btn" data-cat-filter-animal="special">✨ Spéciaux</button>
+                </div>
+                <span class="tools-result-info"><strong class="tools-showing-count-animal">0</strong> résultats</span>
+            </div>
+
+            <div class="tools-grid" id="toolsGridAnimal"></div>
+        </div>
+    </section>
+
+    <section id="section-mineral" class="tools-section tools-section-alt">
+        <div class="mineral-bg-img">
+            <img src="../src/assets/tools/mineral.png" alt="" aria-hidden="true" />
+        </div>
+        <div class="section-inner">
+            <div class="tools-section-header reveal">
+                <div class="tools-section-badge badge-mineral">⛏️ Minéral</div>
+                <h2 class="section-title">Équipements <span class="accent-b">Minéraux</span></h2>
+                <p class="section-sub">Crafts combinant minerais standards de Minecraft et matières naturelles.</p>
+            </div>
+
+            <div class="tools-filter-row reveal reveal-delay-1">
+                <div class="filter-group">
+                    <span class="filter-group-label">Type</span>
+                    <button class="filter-btn active" data-cat-filter-mineral="all">Tous</button>
+                    <button class="filter-btn" data-cat-filter-mineral="weapon">⚔️ Armes</button>
+                    <button class="filter-btn" data-cat-filter-mineral="armor">🛡️ Armures</button>
+                    <button class="filter-btn" data-cat-filter-mineral="tool">⛏️ Outils</button>
+                    <button class="filter-btn" data-cat-filter-mineral="special">✨ Spéciaux</button>
+                </div>
+                <span class="tools-result-info"><strong class="tools-showing-count-mineral">0</strong> résultats</span>
+            </div>
+
+            <div class="tools-grid" id="toolsGridMineral"></div>
+        </div>
+    </section>
+
+    <section id="section-primitive" class="tools-section tools-section-alt">
+        <div class="primitive-bg-img">
+            <img src="../src/assets/tools/primitive.png" alt="" aria-hidden="true" />
+        </div>
+        <div class="section-inner">
+            <div class="tools-section-header reveal">
+                <div class="tools-section-badge badge-primitive">🪨 Primitif</div>
+                <h2 class="section-title">Équipements <span class="accent-o">Primitifs</span></h2>
+                <p class="section-sub">Des outils rudimentaires façonnés à partir des matières les plus brutes de la
+                    nature.</p>
+            </div>
+
+            <div class="tools-filter-row reveal reveal-delay-1">
+                <div class="filter-group">
+                    <span class="filter-group-label">Type</span>
+                    <button class="filter-btn active" data-cat-filter-primitive="all">Tous</button>
+                    <button class="filter-btn" data-cat-filter-primitive="weapon">⚔️ Armes</button>
+                    <button class="filter-btn" data-cat-filter-primitive="armor">🛡️ Armures</button>
+                    <button class="filter-btn" data-cat-filter-primitive="tool">⛏️ Outils</button>
+                    <button class="filter-btn" data-cat-filter-primitive="special">✨ Spéciaux</button>
+                </div>
+                <span class="tools-result-info"><strong class="tools-showing-count-primitive">0</strong>
+                    résultats</span>
+            </div>
+
+            <div class="tools-grid" id="toolsGridPrimitive"></div>
+        </div>
+    </section>
+
+    <section id="section-mixed" class="tools-section">
+        <div class="section-inner">
+            <div class="tools-section-header reveal">
+                <div class="tools-section-badge badge-mixed">🔬 Mixte</div>
+                <h2 class="section-title">Équipements <span class="accent-p">Mixtes</span></h2>
+                <p class="section-sub">Des crafts avancés combinant ressources animales et minerais précieux.</p>
+            </div>
+
+            <div class="tools-filter-row reveal reveal-delay-1">
+                <div class="filter-group">
+                    <span class="filter-group-label">Type</span>
+                    <button class="filter-btn active" data-cat-filter-mixed="all">Tous</button>
+                    <button class="filter-btn" data-cat-filter-mixed="weapon">⚔️ Armes</button>
+                    <button class="filter-btn" data-cat-filter-mixed="armor">🛡️ Armures</button>
+                    <button class="filter-btn" data-cat-filter-mixed="tool">⛏️ Outils</button>
+                    <button class="filter-btn" data-cat-filter-mixed="special">✨ Spéciaux</button>
+                </div>
+                <span class="tools-result-info"><strong class="tools-showing-count-mixed">0</strong> résultats</span>
+            </div>
+
+            <div class="tools-grid" id="toolsGridMixed"></div>
+        </div>
+    </section>
+
+    <section id="crafting-intro">
+        <div class="section-inner">
+            <div class="crafting-intro-grid">
+                <div>
+                    <p class="section-label reveal">Guide de Craft</p>
+                    <h2 class="section-title reveal">Comment <span class="accent-o">fabriquer</span><br />vos
+                        équipements</h2>
+                    <p class="section-sub reveal">
+                        Chaque équipement se fabrique sur une table de craft standard (3×3). Les matériaux se récupèrent
+                        en chassant ou en apprivoisant les créatures du mod.
+                    </p>
+                    <div class="feature-list" style="margin-top:2rem">
+                        <div class="feature-item reveal"
+                            style="display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.25rem;">
+                            <div
+                                style="width:40px;height:40px;background:var(--surface);border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">
+                                🐾</div>
+                            <div>
+                                <h4 style="font-weight:700;margin-bottom:.25rem;">Matériaux Animaux</h4>
+                                <p style="font-size:.9rem;color:var(--text2);line-height:1.5;">Récoltés sur les
+                                    créatures sauvages en les chassant, ou via des drops d'apprivoisement pour les
+                                    créatures domestiquées.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item reveal reveal-delay-1"
+                            style="display:flex;gap:1rem;align-items:flex-start;margin-bottom:1.25rem;">
+                            <div
+                                style="width:40px;height:40px;background:var(--surface);border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">
+                                ⛏️</div>
+                            <div>
+                                <h4 style="font-weight:700;margin-bottom:.25rem;">Matériaux Minéraux</h4>
+                                <p style="font-size:.9rem;color:var(--text2);line-height:1.5;">Minerais standards de
+                                    Minecraft : fer, or, diamant, netherite. Certains crafts avancés les combinent avec
+                                    des matières animales.</p>
+                            </div>
+                        </div>
+                        <div class="feature-item reveal reveal-delay-2"
+                            style="display:flex;gap:1rem;align-items:flex-start;">
+                            <div
+                                style="width:40px;height:40px;background:var(--surface);border:1px solid var(--border);border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">
+                                ✨</div>
+                            <div>
+                                <h4 style="font-weight:700;margin-bottom:.25rem;">Objets Spéciaux</h4>
+                                <p style="font-size:.9rem;color:var(--text2);line-height:1.5;">L'Essence Sauvage et les
+                                    Éclats d'Apprivoisement s'obtiennent dans des structures spéciales ou lors
+                                    d'événements rares.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="crafting-demo reveal reveal-delay-1">
+                    <div class="crafting-table-wrap">
+                        <span class="crafting-table-label">Table de Craft — Exemple</span>
+                        <div class="crafting-demo-grid">
+                            <div class="crafting-demo-slot empty"></div>
+                            <div class="crafting-demo-slot has-item"><img src="../src/assets/tools/items/jade.png">
+                            </div>
+                            <div class="crafting-demo-slot empty"></div>
+                            <div class="crafting-demo-slot empty"></div>
+                            <div class="crafting-demo-slot has-item"><img src="../src/assets/tools/items/jade.png">
+                            </div>
+                            <div class="crafting-demo-slot empty"></div>
+                            <div class="crafting-demo-slot empty"></div>
+                            <div class="crafting-demo-slot has-item"><img src="../src/assets/tools/items/stick.png">
+                            </div>
+                            <div class="crafting-demo-slot empty"></div>
+                        </div>
+                        <div style="display:flex;align-items:center;gap:1.5rem;margin-top:.5rem;">
+                            <div>
+                                <div class="crafting-result-slot"><img src="../src/assets/tools/jade_sword.png"></div>
+                                <p style="text-align:center;font-size:.7rem;color:var(--text3);margin-top:.4rem;">Épée
+                                    en Jade</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools-gallery">
+        <div class="section-inner">
+            <div style="text-align:center;margin-bottom:3rem;">
+                <p class="section-label reveal">Galerie</p>
+                <h2 class="section-title reveal">Les équipements <span class="accent-o">en images</span></h2>
+            </div>
+            <div class="carousel-viewport">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide">
+                        <img class="slide-img" src="../src/assets/Tools.png" alt="Outils Operation W.I.L.D." />
+                        <div class="slide-caption">
+                            <h3>Outils &amp; Équipements</h3>
+                            <p>L'ensemble des outils disponibles dans Operation W.I.L.D.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img class="slide-img" src="../src/assets/animals_wallpapers/Crocodile-Wallpaper.png"
+                            alt="Crocodile" />
+                        <div class="slide-caption">
+                            <h3>Le Crocodile</h3>
+                            <p>Source de l'Épée du Crocodile et du Plastron Croco — crocs, écailles et cuir.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img class="slide-img" src="../src/assets/animals_wallpapers/Gorilla-Wallpaper.png"
+                            alt="Gorille" />
+                        <div class="slide-caption">
+                            <h3>Le Gorille</h3>
+                            <p>Fournit la Hache du Gorille, les Gantelets et le Plastron du Gorille.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img class="slide-img" src="../src/assets/animals_wallpapers/Hippopotamus-Wallpaper.png"
+                            alt="Hippopotame" />
+                        <div class="slide-caption">
+                            <h3>L'Hippopotame</h3>
+                            <p>Masse, Bouclier, Pelle — l'Hippopotame est la source la plus versatile du mod.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img class="slide-img" src="../src/assets/animals_wallpapers/Tiger-Wallpaper.png" alt="Tigre" />
+                        <div class="slide-caption">
+                            <h3>Le Tigre</h3>
+                            <p>Les Griffes du Tigre — arme combo à dégâts croissants.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img class="slide-img" src="../src/assets/animals_wallpapers/Boa-Wallpaper.png" alt="Boa" />
+                        <div class="slide-caption">
+                            <h3>Le Boa</h3>
+                            <p>Fouet, Lame Venimeuse, Casque d'Écailles et Canne à Pêche.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn" id="carouselPrev">&#8592;</button>
+                <div class="carousel-dots" id="carouselDots"></div>
+                <button class="carousel-btn" id="carouselNext">&#8594;</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="materials">
+        <div class="section-inner">
+            <div style="text-align:center;margin-bottom:1rem;">
+                <p class="section-label reveal" style="display:inline-block;">Ressources</p>
+                <h2 class="section-title reveal">Glossaire des <span class="accent-g">Matériaux</span></h2>
+                <p class="section-sub reveal" style="margin:0 auto;">Tous les matériaux utilisés dans les recettes de
+                    craft des équipements du mod.</p>
+            </div>
+            <div class="materials-grid" id="materialsGlossary"></div>
+        </div>
+    </section>
+
+    <div id="toolModalOverlay">
+        <div class="tool-modal">
+            <div class="modal-header">
+                <div class="modal-emoji-wrap">
+                    <span id="modalEmoji">⚔️</span>
+                </div>
+                <div class="modal-title-wrap">
+                    <div class="modal-badges">
+                        <span id="modalCatBadge" class="modal-cat-badge">⚔️ Arme</span>
+                    </div>
+                    <h2 id="modalName">Nom de l'Outil</h2>
+                </div>
+                <button class="modal-close-btn" id="modalCloseBtn" aria-label="Fermer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.5">
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-left">
+                    <span class="modal-section-title">Description</span>
+                    <p id="modalDescription"></p>
+                    <p id="modalLore"></p>
+                    <span class="modal-section-title">Statistiques</span>
+                    <div class="modal-stats" id="modalStats"></div>
+                    <div id="modalSource"></div>
+                </div>
+                <div class="modal-right">
+                    <span class="modal-section-title">Recette de Craft</span>
+                    <div id="modalCraftingGrid"></div>
+                    <span class="modal-section-title" data-materials-title
+                        style="margin-top:1.25rem;display:block;">Ingrédients Nécessaires</span>
+                    <div class="modal-materials" id="modalMaterials"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="section-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <img src="../src/assets/Main-Title.png" alt="Operation W.I.L.D." />
+                    <p>Operation W.I.L.D. est un mod Minecraft qui ajoute toute une gamme d'animaux et de créatures que
+                        vous pouvez apprivoiser, monter, améliorer et personnaliser.</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Équipements</h5>
+                    <ul>
+                        <li><a href="#section-animal">Armes Animales</a></li>
+                        <li><a href="#section-mineral">Outils Minéraux</a></li>
+                        <li><a href="#section-mixed">Mixtes</a></li>
+                        <li><a href="#materials">Matériaux</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Wiki</h5>
+                    <ul>
+                        <li><a href="../index.html#animals">Animaux</a></li>
+                        <li><a href="../index.html#biomes">Biomes</a></li>
+                        <li><a href="../index.html#cosmetics">Cosmétiques</a></li>
+                        <li><a href="../index.html#structures">Structures</a></li>
+                        <li><a href="../index.html#roadmap">Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Communauté</h5>
+                    <ul>
+                        <li><a href="https://discord.gg/KtBpwYdpSB" target="_blank">Discord</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="https://www.curseforge.com/minecraft/mc-mods/operation-w-i-l-d"
+                                target="_blank">CurseForge</a></li>
+                        <li><a href="#">Modrinth</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>©
+                    <script>document.write(new Date().getFullYear())</script> Operation W.I.L.D. — Tous droits réservés.
+                    Non affilié à <a href="#">Mojang/Microsoft</a>.
+                </p>
+                <div class="footer-socials">
+                    <a href="https://discord.gg/KtBpwYdpSB" target="_blank" class="social-btn" title="Discord"><i
+                            class="fa-brands fa-discord"></i></a>
+                    <a href="#" class="social-btn" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.curseforge.com/minecraft/mc-mods/operation-w-i-l-d" target="_blank"
+                        class="social-btn" title="CurseForge"><i class="fa-solid fa-hammer"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../entities.js"></script>
+    <script src="script.js"></script>
+    <script src="../search.js"></script>
+    <script src="../navbar.js"></script>
+</body>
+
+</html>
